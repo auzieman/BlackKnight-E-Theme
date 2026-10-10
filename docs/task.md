@@ -149,3 +149,5 @@ BK-016 result: three effect fields survived the desktop restart in the trial con
 
 ## BK-017 — focus-opacity preview
 User selected focus-based opacity. Prepared a standalone X11 property preview: inactive ordinary windows capped at 92%, active windows retain their original opacity, menus/dialogs/fullscreen excluded, active dialog parent retained. Native E27.1 e_comp_x.c confirms NET_WM_WINDOW_OPACITY handling. No desktop restart or persistent service. Bounded 20-second process restores saved properties in finally on normal completion or SIGINT/SIGTERM. Runtime log confirms original opacity properties restored for 12 windows. Host log check was slow; visual acceptance and sustained performance remain user review. Source: master/compositor/focus-opacity.py.
+
+BK-017 user result: user reports the focus-opacity trial crashed/disrupted applications. Marked FAILED visual/runtime acceptance despite the restoration log. Do not rerun or enable persistently; retain original settings.

@@ -9,3 +9,5 @@ The candidate is encoded into a copy of the existing Eet archive, then decoded t
 Visual effect acceptance is pending user review. No permanent application was performed. Leave the user's windows open during trials and retain the rollback preference.
 
 `focus-opacity.py` is a separate temporary X11 preview: it caps inactive ordinary windows at 92% for 20 seconds, preserves original opacity for the active window and excludes dialogs/menus/fullscreen. It restores original properties on completion or SIGINT/SIGTERM; it is not a persistent service. First runtime completed restoration for 12 windows. Visual acceptance/performance remain pending user review.
+
+User subsequently reported that the focus-opacity experiment crashed/disrupted applications. This preview is rejected; do not rerun it or enable it as a persistent service. Restoration logs do not imply stable rendering.
