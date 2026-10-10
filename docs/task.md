@@ -44,3 +44,7 @@ Rollback: revert BK-005 documentation commit.
 Acceptance: fingerprint sources, name concrete groups/signals, distinguish source evidence from runtime proof, and map artwork changes to retained behaviour.
 
 BK-005 result: recovered and inspected Sci-Fi embedded source text; documented staged focus/glints, hover chains, shaped/scalable shelves, mapped rotation and image tweens. Compared current and archived Transient-Color, including cancellation-aware volume reveal and disabled filters. Source hashes/revisions and adaptation boundaries recorded in docs/theme-mechanisms.md. No upstream assets copied into the kit, theme applied, EDJ compiled or runtime/performance PASS claimed. Next slice: representative original forged-blue border artwork retaining existing theme mechanics; extraction/licensing and remote compiler proof remain prerequisites to distributing an adapted theme.
+
+## BK-005 follow-up — bundled wallpaper references
+Plan: locate user-named wallpapers and inspect available editable source; documentation only. Rollback: revert follow-up commit.
+Result: found installed E23 Sci-Fi, Oh-v1 and blackhole-pclos-bt2 wallpaper packages. Oh-v1 source confirms two texture-origin drift loops (55/65 seconds). Black identity is provisional; its internals remain uninspected.

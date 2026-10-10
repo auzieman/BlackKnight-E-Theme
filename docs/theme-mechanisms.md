@@ -64,3 +64,11 @@ The next visual slice should retain Sci-Fi's existing geometry and programs whil
 The SVG palette preview is a colour study only; it does not represent the existing theme's material depth or animation. No final base-theme selection or asset replacement is made by this report.
 
 Before shipping an adapted EDJ: identify upstream author/license and per-asset provenance; obtain proper editable extraction, compile through the approved remote toolchain, and test on the actual E version. Check rapid hover/focus reversal, resize, shelf orientation, hidden/minimized behaviour, idle activity and still/low-motion alternatives. These are pending acceptance checks, not reasons to redesign the whole theme.
+
+## Additional wallpaper references named by the user
+
+The installed wallpaper folder `/home/auzieman/.e/e/backgrounds` contains `E23-scifi-good-FULL-anim.edj`, `background-oh-V1.edj`, `background-oh-V1 (1).edj` and `blackhole-pclos-bt2.edj`. The last is a candidate for the user's “Black” reference; that identity is not established. These are wallpaper packages separate from the installed theme folder. Sci-Fi also embeds an `e/desktop/background` group in its full theme, as described above.
+
+Oh-v1 has directly editable source at `Animated-background/background-oh-V1/background.edc` in the studied repository revision. Its `e/desktop/background` group layers `bg.png`, `cloud2.png` and `cloud1.png`. The cloud parts disable mouse events. Each cloud's `drift` state shifts its image fill origin by one declared texture width: 1.47083 for cloud2 and 1.86667 for cloud1. `show` starts LINEAR transitions lasting 65 and 55 seconds respectively; each `after` chain resets to default and starts again. Different speeds provide layered motion without a frame sequence.
+
+A texture-origin reset by exactly one tile width is a useful seamless-loop technique, but the texture edges must actually tile. No rendered seam or performance test has been performed here. The source also declares `nappe-cloud.png` and `stars.png` (stars twice); those files are absent from the source folder, and the inspected parts do not use them. Treat this as a source cleanup/build-input issue rather than assuming the source will compile unchanged. Blackhole package animation and the installed Oh-v1 variants' correspondence to this source remain unverified.
