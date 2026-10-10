@@ -8,3 +8,5 @@ All features are planning candidates; folder presence is not implementation.
 | Shared blue-metal foundation | Planned | Demonstrate reuse without coupling theme-specific assets |
 | Fog/eyes/lightning | Planned | Validate rendering, readability, idle cost and low-motion option |
 | Tutorial kit | Planned | Editable, reproducible examples with verified build/render evidence |
+
+BK-001: original still artwork and Edje animation source prepared. Full Sci-Fi source extraction, theme artwork adjustment, compile/render proof and performance acceptance remain pending.

@@ -1,0 +1,67 @@
+// Original BK-001 source. Same base plate for still and animated builds.
+images {
+ image: "scene.png" LOSSY 92;
+#ifdef ANIMATED
+ image: "clouds.svg" COMP;
+ image: "lightning.svg" COMP;
+#endif
+}
+collections {
+ group {
+  name: "e/desktop/background";
+  data { item: "style" "4"; }
+  parts {
+   part { name: "scene"; type: IMAGE; mouse_events: 0;
+    description { state: "default" 0.0; image.normal: "scene.png"; }
+   }
+#ifdef ANIMATED
+   part { name: "clouds"; type: IMAGE; mouse_events: 0;
+    description { state: "default" 0.0;
+     rel1.relative: -0.22 0.03; rel2.relative: 0.98 0.34;
+     image.normal: "clouds.svg";
+    }
+    description { state: "crossed" 0.0; inherit: "default" 0.0;
+     rel1.relative: 0.0 0.04; rel2.relative: 1.2 0.35;
+    }
+   }
+   part { name: "lightning"; type: IMAGE; mouse_events: 0;
+    description { state: "default" 0.0;
+     rel1.relative: 0.39 0.0; rel2.relative: 0.60 0.55;
+     image.normal: "lightning.svg"; color: 255 255 255 0;
+    }
+    description { state: "lit" 0.0; inherit: "default" 0.0; color: 255 255 255 120; }
+   }
+#endif
+  }
+#ifdef ANIMATED
+  programs {
+   program { name: "cloud-out"; signal: "load"; source: "";
+    action: STATE_SET "crossed" 0.0; target: "clouds";
+    transition: SINUSOIDAL 75.0; after: "cloud-back";
+   }
+   program { name: "cloud-back";
+    action: STATE_SET "default" 0.0; target: "clouds";
+    transition: SINUSOIDAL 75.0; after: "cloud-out";
+   }
+   program { name: "storm-wait"; signal: "load"; source: "";
+    in: 28.0 18.0; action: STATE_SET "lit" 0.0; target: "lightning";
+    transition: LINEAR 0.18; after: "storm-fade";
+   }
+   program { name: "storm-fade";
+    action: STATE_SET "default" 0.0; target: "lightning";
+    transition: DECELERATE 0.9; after: "storm-wait";
+   }
+   // Hosting preview can signal pause; E's hidden-desktop behaviour needs proof.
+   program { name: "pause"; signal: "bk,pause"; source: "*";
+    action: ACTION_STOP; target: "cloud-out"; target: "cloud-back";
+    target: "storm-wait"; target: "storm-fade";
+    after: "clear-strike";
+   }
+   program { name: "clear-strike"; action: STATE_SET "default" 0.0; target: "lightning"; }
+   program { name: "resume"; signal: "bk,resume"; source: "*";
+    after: "cloud-out"; after: "storm-wait";
+   }
+  }
+#endif
+ }
+}

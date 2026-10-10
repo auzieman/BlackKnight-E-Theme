@@ -1,0 +1,11 @@
+{
+  "task": "BK-001",
+  "created": "2026-10-10",
+  "scene": {
+    "file": "scene.png",
+    "sha256": "7d1a56abcf93c362364801980f4337db51c3107330d0e4ae2ec6ba9cf5c719ac",
+    "origin": "Original built-in imagegen generation from written user concept; no third-party reference images supplied"
+  },
+  "overlays": "Original SVG cloud-shadow and lightning drawings",
+  "status": "Still artwork inspected; Edje compilation/render/performance pending"
+}

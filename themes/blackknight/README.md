@@ -1,2 +1,6 @@
-# BlackKnight candidate
-Blue-metal interface with kneeling knight, grounded sword, misty mountains, electric eyes and occasional lightning. Source study and still preview precede animation; no assets implemented yet.
+# BlackKnight wallpaper MVP
+Original scene.png is the still wallpaper. wallpaper.edc provides matching still and animated e/desktop/background groups. Assets are original generated scene artwork plus original SVG overlays; no artist reference images copied.
+Run build.sh through the BKC remote build path with verified EFL/edje_cc and SVG-loader support. Outputs: blackknight-still.edj and blackknight-animated.edj. These have not yet been compiled or applied.
+MVP animation: slow cloud-shadow layer crossing the moon region and a restrained localized lightning stroke after a 28–46 second delay. No full-screen flash or eye animation. Layered fog/parallax and scene relighting are future refinements, not implemented claims.
+Still PNG/EDJ is the low-motion choice. Animated transitions can still redraw at display rate despite their slow duration; measure target CPU/memory before choosing default. Hidden-desktop pause requires host wiring/runtime proof; bk,pause and bk,resume signals are available to a preview host.
+Current scene fills the output; differing aspect ratios may distort it. Validate laptop 1600x900 and external 1920x1080 first (both 16:9); define crop/letterbox policy separately for other sizes.
