@@ -35,36 +35,9 @@ text=text[:first]+detail+text[last:]
 for name in ["border_shaped.edc","border_noresize.edc","border_dialog.edc","border_noresize_dialog.edc"]:
  assert (a.output/name).is_file()
  text=text.replace('#include "'+name+'"', '// Alternate style supplied by installed base: '+name)
+pixel=text.index('name: "e/widgets/border/pixel/border";')
+text=text[:text.rfind('group {',0,pixel)]
 p.write_text(text)
-# Old media aliases request a nonexistent clicked state; use their pressed state.
-b=a.output/"edc/elm/button.edc";buttons=b.read_text()
-first=buttons.index('group { name: "elm/button/base/media_player/prev/default";')
-last=buttons.index('group { name: "elm/button/base/hoversel_vertical/default";',first)
-media=buttons[first:last]
-assert media.count('action: STATE_SET "clicked" 0.0;')==1
-media=media.replace('action: STATE_SET "clicked" 0.0;', 'action: STATE_SET "selected" 0.0;')
-b.write_text(buttons[:first]+media+buttons[last:])
-for name,count in [("genlist.edc",1),("list.edc",2),("gengrid.edc",1)]:
- f=a.output/"edc/elm"/name;data=f.read_text()
- assert data.count('action: STATE_SET "odd" 1.0;')==count
- f.write_text(data.replace('action: STATE_SET "odd" 1.0;', 'action: STATE_SET "odd" 0.0;'))
-m=a.output/"edc/elm/menu.edc";menus=m.read_text()
-marker='      part { name: "base"; type: RECT; repeat_events: 1;\n         description { state: "default" 0.0;\n            color: 0 0 0 0;\n         }\n      }'
-first=menus.index('group { name: "elm/hover/base/main_menu_submenu/default";')
-assert menus[first:].count(marker)==1
-m.write_text(menus[:first]+menus[first:].replace(marker,'      part { name: "base"; type: RECT; repeat_events: 1;\n         description { state: "default" 0.0;\n            color: 0 0 0 0;\n         }\n         description { state: "visible" 0.0; inherit: "default" 0.0; }\n      }'))
-bg=a.output/"edc/default_background.edc";background=bg.read_text()
-for name in ["anim_d","anim_g"]:
- start=background.index('image { "'+name+'";')
- opening=background.index('{',start);depth=0
- for end in range(opening,len(background)):
-  if background[end]=='{': depth+=1
-  elif background[end]=='}': depth-=1
-  if depth==0: break
- block=background[start:end]
- assert '"button"' not in block
- background=background[:end]+'description { state: "button" 0.0; inherit: "default" 0.0; }\n         '+background[end:]
-bg.write_text(background)
 shutil.copy2(root/"master/blue-steel/assets/plate.png",a.output/"wrk/bk-blue-plate.png")
 manifest={"base_border_sha256":hashlib.sha256(original.encode()).hexdigest(),"adapted_border_sha256":hashlib.sha256(text.encode()).hexdigest(),"plate_sha256":hashlib.sha256((a.output/"wrk/bk-blue-plate.png").read_bytes()).hexdigest(),"scope":"default window titlebar material; upstream geometry/actions/effects retained","distribution":"private local study; upstream licensing not established"}
 (a.output/"blackknight-source.json").write_text(json.dumps(manifest,indent=2)+"\n")
