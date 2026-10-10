@@ -1,0 +1,76 @@
+{
+  "method": "deterministic crop/scale of approved plate/button; donor alpha retained",
+  "slice_recipe": "../slice-frame.sh",
+  "sources": [
+    "../../../../master/blue-steel/assets/plate.png",
+    "../../../../master/blue-steel/assets/button.png"
+  ],
+  "images": [
+    {
+      "file": "default_bottom_left.png",
+      "sha256": "d56b60716f16dffca232bfa5a4072d2dc7ad888bdd28efc7c14b9e688b39cf89",
+      "donor_alpha_md5": "MD5=8219b90a952e3008e97fa02f8c685dba"
+    },
+    {
+      "file": "default_bottom_left_corner.png",
+      "sha256": "2a78030ee30f1127eedf5b945c45500ffe8ec834a3305dc68f10038039ca2289",
+      "donor_alpha_md5": "MD5=ea12a74907b663d784394b2e5704fe3e"
+    },
+    {
+      "file": "default_bottom_mid.png",
+      "sha256": "b89fe08bc3b882d92b8f523e177e5c6683f7105cc229d47e37a97be28dea22f1",
+      "donor_alpha_md5": "MD5=b4a146dc7da1c29222adfdd1c80ed863"
+    },
+    {
+      "file": "default_bottom_right.png",
+      "sha256": "a93b026332ae11b5900e4fa22ffea4bbeb0d00c0f8e6b579346dae4122598163",
+      "donor_alpha_md5": "MD5=8219b90a952e3008e97fa02f8c685dba"
+    },
+    {
+      "file": "default_bottom_right_corner.png",
+      "sha256": "b7e08e7bf5bbb8b87669bf0882c32fc3e61cc17b500782621a63741a5ec9d080",
+      "donor_alpha_md5": "MD5=eb28de88305ae0426cb3015f10d8bfe3"
+    },
+    {
+      "file": "default_left_border_mid.png",
+      "sha256": "b7a8a17eab0fec734d75174b400abf06edcceb5b8c75a3fe1c2dbb2e37d13fb1",
+      "donor_alpha_md5": "MD5=e3727e0aa9f1033fd062dba0b725bd8a"
+    },
+    {
+      "file": "default_left_border_top.png",
+      "sha256": "b7a8a17eab0fec734d75174b400abf06edcceb5b8c75a3fe1c2dbb2e37d13fb1",
+      "donor_alpha_md5": "MD5=e3727e0aa9f1033fd062dba0b725bd8a"
+    },
+    {
+      "file": "default_right_border.png",
+      "sha256": "af31a775fb08ccb66683902aa03e65545b872eb5e12d0887655050ec026d7c8c",
+      "donor_alpha_md5": "MD5=4c76ed5c89d0b191f5172c3a011edf11"
+    },
+    {
+      "file": "default_top_left_corner.png",
+      "sha256": "6b6d84a6ddc57bca79b5ded395a21cd14078b558ca71542fa177d636defc66d0",
+      "donor_alpha_md5": "MD5=b08aaf9b17406c39ce89f8438eae499d"
+    },
+    {
+      "file": "default_top_right_corner.png",
+      "sha256": "538d0b5116f6ace6981d43e55475424df8214d8fc5507bbc09094da36dfe140b",
+      "donor_alpha_md5": "MD5=dc2656621f95659fe102a4beb5c915c4"
+    },
+    {
+      "file": "default_top_titlebar.png",
+      "sha256": "75d2c579c0a2439ddf5155de78b5e40a425b8c4b0b1db18f2aaf2b112624c689",
+      "donor_alpha_md5": "MD5=70bd2fe991882e3418907ee7a42b95e1"
+    },
+    {
+      "file": "e17_mini_button.png",
+      "sha256": "83615276106e6cc4a2aefd93501dd35cf1ac995c47bf25feebd0c45616db79cb",
+      "donor_alpha_md5": "MD5=36ab5bbc84127288a4bfbab259005f93"
+    }
+  ],
+  "material_sha256": {
+    "plate.png": "f932d5f2b2ffc4460364d6b64071c95206439ea9672e89d6de54321af2fc1b2f",
+    "button.png": "911eb8b338d59ab87e40afebebe0b37a37ab0e0e7bc7b2340bf87bf4af490a21"
+  },
+  "donor_edj_sha256": "99536074e913dedc79d9fc88e59cc4263fe8c87d1fd08e742aef85c119f89e7e",
+  "recipe_snapshot": "#!/bin/sh\n# Deterministic slicing of approved artwork into the existing donor image slots.\nset -eu\nbase=$1\nmaterial=$2\noutput=$3\nmkdir -p \"$output\"\nslice() {\n name=$1; image=$2; crop=$3; size=$4; rotate=${5:-null}\n ffmpeg -hide_banner -loglevel error -threads 1 -filter_complex_threads 1 \\\n  -i \"$material/$image.png\" -i \"$base/wrk/$name.png\" \\\n  -filter_complex \"[0:v]crop=$crop,$rotate,scale=$size:flags=lanczos,format=rgba[metal];[1:v]scale=$size:flags=neighbor,format=rgba,alphaextract[mask];[metal][mask]alphamerge[out]\" \\\n  -map '[out]' -frames:v 1 -y \"$output/$name.png\"\n}\nslice default_top_left_corner plate 300:520:0:0 30:27\nslice default_top_titlebar plate 1550:520:310:0 49:27\nslice default_top_right_corner plate 310:520:1860:0 104:27\nslice default_left_border_mid plate 42:370:220:65 19:19\nslice default_left_border_top plate 42:370:220:65 19:19\nslice default_right_border plate 42:370:1900:65 19:19\nslice default_bottom_left_corner plate 310:135:0:385 63:18\nslice default_bottom_right_corner plate 310:135:1860:385 63:18\nslice default_bottom_left plate 400:75:320:440 31:16\nslice default_bottom_right plate 400:75:1420:440 31:16\nslice default_bottom_mid plate 1100:75:520:440 78:16\nslice e17_mini_button button 1248:1248:0:0 24:24\n"
+}

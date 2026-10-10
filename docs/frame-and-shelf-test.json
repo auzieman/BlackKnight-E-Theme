@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-10",
+  "bkc_run": "48adbdda-4241-4861-ae0b-3fb480815a85",
+  "payload_sha256": "3ee580f26bac0bdc4a4b85ddf05e7107fa1028b5a5bea6cb3a8bec6704c7ef1c",
+  "artifact_sha256": {
+    "BlackKnight-BlueSteel.edj": "77c99d71f8f4f49de5e73102c5df1782f29ee86cbb91bc941e96e0c76b2bac39",
+    "theme-trial": "8207534e1514dde359a6e3f4aa81b4951a686c4d44329b2a37479f5a9be2bd78",
+    "remap-images": "370a084bd9ad04cb85fc050b1840a3fae9e728ef7a9a6fdea111479eeb9e0fae"
+  },
+  "archive_verification": "REMAPPED default_top_left_corner edje/images/942 30x27\nREMAPPED default_top_titlebar edje/images/943 1024x27\nREMAPPED default_top_right_corner edje/images/944 104x27\nREMAPPED default_left_border_mid edje/images/949 19x19\nREMAPPED default_left_border_top edje/images/950 19x19\nREMAPPED default_right_border edje/images/956 19x19\nREMAPPED default_bottom_right_corner edje/images/951 63x18\nREMAPPED default_bottom_right edje/images/952 31x16\nREMAPPED default_bottom_mid edje/images/953 78x16\nREMAPPED default_bottom_left edje/images/954 31x16\nREMAPPED default_bottom_left_corner edje/images/955 63x18\nREMAPPED e17_mini_button edje/images/989 24x24\nREMAPPED e17_shelf_bg2_h edje/images/903 296x101\nREMAPPED e17_shelf_bg2_v edje/images/904 101x296\nREMAPPED e17_shelf_bg3_v edje/images/908 101x296\nREMAPPED shelf_bar edje/images/907 296x101\nREMAPPED shelf_bottom edje/images/895 4x4\nREMAPPED shelf_top edje/images/896 4x4\nREMAPPED shelf_bottom_left edje/images/897 24x21\nREMAPPED shelf_bottom_right edje/images/898 24x21\nREMAPPED shelf_top_left edje/images/899 24x21\nREMAPPED shelf_top_right edje/images/900 24x21\nREMAPPED shelf_mid_left edje/images/901 24x5\nREMAPPED shelf_mid_right edje/images/902 24x5\nREMAPPED shelf_ibar_bg edje/images/905 64x48\nVERIFIED 4634 unchanged entries; 25 image-only replacements\n",
+  "trial_log": "PREVIOUS E20-Scifi-theme\nTRIAL /home/auzieman/Projects/E-projects/theme-kit/build/out/frame-and-shelf-v2/result/BlackKnight-BlueSteel.edj:E20-Scifi-theme\nROLLBACK 20 seconds\nRESTORED E20-Scifi-theme\nRESTORED E20-Scifi-theme\nDesktop restart requested with restored theme\n",
+  "saved_original_theme": "E20-Scifi-theme",
+  "saved_restored_theme": "E20-Scifi-theme",
+  "resolved_theme_after": "E20-Scifi-theme:E20-Scifi-theme:default",
+  "images": [
+    "images/frame-remap-v2-trial.png",
+    "images/shelf-remap-v2-before.png",
+    "images/shelf-remap-v2-trial.png",
+    "images/shelf-remap-v2-restored.png"
+  ],
+  "limitations": [
+    "Window proof partially obscured by overlapping sample windows after desktop restart",
+    "Desktop bar scope is shelf artwork; generic application toolbar images remain original",
+    "Visual refinement and user acceptance of the second pass remain pending"
+  ]
+}

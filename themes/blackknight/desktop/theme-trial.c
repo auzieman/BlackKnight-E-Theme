@@ -17,9 +17,9 @@ EAPI_MAIN int elm_main(int argc, char **argv) {
   elm_theme_set(NULL,argv[2]); elm_config_all_flush();
   printf("RESTORED %s\n",argv[2]); return 0;
  }
- if (argc!=2) { fprintf(stderr,"Usage: %s [THEME_EDJ]\n",argv[0]); return 2; }
+ if (argc!=2 && !(argc==4 && !strcmp(argv[2],"--previous"))) { fprintf(stderr,"Usage: %s [THEME_EDJ]\n",argv[0]); return 2; }
  if (!edje_file_group_exists(argv[1], "e/widgets/border/default/border")) { fprintf(stderr,"Missing desktop border group\n"); return 1; }
- previous=strdup(current);
+ previous=strdup(argc==4 ? argv[3] : current);
  if (!previous) return 1;
  // Arm the rollback before broadcasting the trial theme.
  if (!ecore_timer_add(20.0,restore,NULL)) { free(previous); return 1; }

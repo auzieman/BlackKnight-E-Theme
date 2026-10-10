@@ -5,7 +5,12 @@ helper=$1
 theme=$2
 log=$3
 "$helper" > "$log.before"
-previous=$(sed -n 's/^THEME //p' "$log.before")
+# elm_theme_get returns a resolved fallback chain, not the saved setting.
+# Decode read-only; Eet -r would REMOVE the config entry.
+profile=$(sed -n 's/^PROFILE //p' "$log.before")
+case "$profile" in ''|*[!a-zA-Z0-9_-]*) exit 1;; esac
+eet -d "$HOME/.elementary/config/$profile/base.cfg" config "$log.config-before"
+previous=$(sed -n 's/^ *value "theme" string: "\([^"\\]*\)";$/\1/p' "$log.config-before")
 [ -n "$previous" ]
 restore() {
  trap - EXIT INT TERM
@@ -14,7 +19,7 @@ restore() {
  printf '%s\n' 'Desktop restart requested with restored theme' >> "$log"
 }
 trap restore EXIT INT TERM
-"$helper" "$theme" > "$log" 2>&1 &
+"$helper" "$theme" --previous "$previous" > "$log" 2>&1 &
 trial_pid=$!
 i=0
 while ! grep -q '^TRIAL ' "$log"; do
