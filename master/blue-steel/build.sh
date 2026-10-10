@@ -11,6 +11,6 @@ out=$(cd "$1" && pwd)
 edje_cc -id "$base/assets" "$base/material.edc" -o "$out/blackknight-material.edj"
 sha256sum "$out/blackknight-material.edj" > "$out/blackknight-material.edj.sha256"
 
-cc -std=c99 -Wall -Wextra $(pkg-config --cflags elementary) "$base/preview.c" $(pkg-config --libs elementary) -o "$out/skin-test"
+cc -std=gnu99 -Wall -Wextra $(pkg-config --cflags elementary) "$base/preview.c" $(pkg-config --libs elementary) -o "$out/skin-test"
 sha256sum "$out/skin-test" > "$out/skin-test.sha256"
 pkg-config --modversion elementary > "$out/elementary-version.txt"

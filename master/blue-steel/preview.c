@@ -22,10 +22,10 @@ static void action(void *data, Evas_Object *obj, const char *emission, const cha
 static void quit(void *data, Evas_Object *obj, void *event_info) {
  (void)data; (void)obj; (void)event_info; elm_exit();
 }
-static void key(void *data, Evas_Object *obj, void *event_info) {
+static void key(void *data, Evas *canvas, Evas_Object *obj, void *event_info) {
  Evas_Event_Key_Down *event = event_info;
  const char *name = event->keyname;
- (void)data; (void)obj;
+ (void)data; (void)canvas; (void)obj;
  if (!strcmp(name, "Escape")) elm_exit();
  else if (!strcmp(name, "F1") && !hidden) { active("bk,state,active", window, NULL); report("Focused: one sweep"); }
  else if (!strcmp(name, "F2") && !hidden) { active("bk,state,inactive", window, NULL); report("Inactive: sweep cancelled"); }
