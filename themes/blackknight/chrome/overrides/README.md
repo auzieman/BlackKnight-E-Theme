@@ -1,1 +1,1 @@
-Place original replacement artwork here using the paths and dimensions in ../asset-contract.json. No replacements are approved yet. Keep glints separate from base metal. Do not place the concept sheet directly into the titlebar.
+Nine original dimensioned replacement PNGs are present in wrk/. Editable sources and hashes live in ../sources/ and ../artwork-provenance.json. These are first asset candidates; target render and material refinement remain pending. Keep glints separate from base metal.

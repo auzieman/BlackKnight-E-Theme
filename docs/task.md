@@ -58,3 +58,10 @@ BK-006 result: generated and visually inspected an original forged-blue concept 
 Plan: map newly located editable Sci-Fi source, record original dimensions/hashes and add isolated remote build staging. Keep upstream source and installed theme untouched. Rollback: revert BK-007 files. Acceptance: explicit asset contract and build inputs; no compatibility or artwork completion claim.
 
 BK-007 result: located full editable Sci-Fi tree with border and shelf EDC, created nine-asset dimension/hash contract and separate staging/build recipe. No replacement artwork yet; overlay is deliberately empty. Shell syntax and JSON validation passed; compiler unavailable and runtime proof pending. Next: author dimensioned plates/glints from the approved material direction and compare staged source to installed base.
+
+## BK-008 — dimensioned chrome artwork
+Plan: author original editable vector plates/outline/glints at contracted dimensions and rasterize with rsvg-convert; preserve upstream EDC and assets. Build an asset preview and provenance inventory. Wallpaper follow-up stays scoped to lessons and later render proof. Rollback: revert BK-008. Acceptance: nine RGBA PNGs match dimensions, source and hashes retained; no EDJ/runtime claim without compiler.
+
+BK-008 result: nine original SVG/PNG assets authored at contracted dimensions, plus actual-asset preview and hash inventory. Existing EDC, reference textures and wallpaper untouched. Glints use light neutral pixels for existing EDC tinting. Raster export succeeded; PNG dimensions and XML checked. EDJ compilation, nine-slice rendering and visual acceptance remain pending. Wallpaper follow-up: retain accepted scene; next render slice should examine cloud texture layering and synchronize strike/relighting without adding continuous chrome loops.
+
+Compiler recheck: edje_cc still absent locally; read-only SSH to lab-ai-worker failed with No route to host. No remote build or deployment attempted. Actual-asset preview inspected: dimensioned base plates are quieter than the approved concept sheet; EDC-layered appearance and further material refinement remain unaccepted until target rendering.

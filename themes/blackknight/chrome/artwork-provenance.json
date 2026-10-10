@@ -1,0 +1,69 @@
+{
+  "kind": "original code-native SVG artwork; PNG rasterization via rsvg-convert",
+  "status": "first dimensioned asset candidate; not runtime accepted",
+  "assets": [
+    {
+      "path": "wrk/e17_titlebar.png",
+      "source": "sources/e17_titlebar.svg",
+      "sha256": "8cacde6c215f78ac7600efb28155c777a527da69a4e6d2ae4a8655ab81d9aee2",
+      "width": 200,
+      "height": 24
+    },
+    {
+      "path": "wrk/e17_titlebar_outline.png",
+      "source": "sources/e17_titlebar_outline.svg",
+      "sha256": "705f8d793fe940a2c805294eaf67460055fab5d11540dfbfa710f7f4be4a162f",
+      "width": 200,
+      "height": 24
+    },
+    {
+      "path": "wrk/e17_titlebar_shadow1.png",
+      "source": "sources/e17_titlebar_shadow1.svg",
+      "sha256": "c07eb8a2c25d0c2fda79c0a353f78d9f229865b0eca0426c850979ce5ae1c335",
+      "width": 200,
+      "height": 24
+    },
+    {
+      "path": "wrk/e17_titlebar_shadow2.png",
+      "source": "sources/e17_titlebar_shadow2.svg",
+      "sha256": "c07eb8a2c25d0c2fda79c0a353f78d9f229865b0eca0426c850979ce5ae1c335",
+      "width": 200,
+      "height": 24
+    },
+    {
+      "path": "wrk/e17_titlebar_glint1.png",
+      "source": "sources/e17_titlebar_glint1.svg",
+      "sha256": "3db4f88a727521c976038d7bdf6ccac757f885aba20f840e41eb0ddda13ee26f",
+      "width": 34,
+      "height": 13
+    },
+    {
+      "path": "wrk/e17_titlebar_glint2.png",
+      "source": "sources/e17_titlebar_glint2.svg",
+      "sha256": "2a3382467a9a030d2b8d813797cc1513c4b1c1444ba5760498b946e07f6465a8",
+      "width": 169,
+      "height": 18
+    },
+    {
+      "path": "wrk/e17_titlebar_glint3.png",
+      "source": "sources/e17_titlebar_glint3.svg",
+      "sha256": "3db4f88a727521c976038d7bdf6ccac757f885aba20f840e41eb0ddda13ee26f",
+      "width": 34,
+      "height": 13
+    },
+    {
+      "path": "wrk/shelf_bar.png",
+      "source": "sources/shelf_bar.svg",
+      "sha256": "c76a6704935494a5dfa05d5b7949baa175e898936fead8ca8af71935154dba78",
+      "width": 296,
+      "height": 101
+    },
+    {
+      "path": "wrk/e17_shelf_bg3_v.png",
+      "source": "sources/e17_shelf_bg3_v.svg",
+      "sha256": "c8cfa3b867da41ce287b2de8b9ad7250c1cba91720064e4d479b18e4ae23b338",
+      "width": 101,
+      "height": 296
+    }
+  ]
+}
