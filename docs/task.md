@@ -21,3 +21,8 @@ Rollback: revert BK-001 feature commits; original wallpapers/themes remain untou
 Acceptance: inspect original artwork, preserve editable source, provide low-motion alternative, record compiler/runtime limits honestly. Remote compile and target performance remain separate evidence.
 
 BK-001 result: original still scene inspected and saved in theme-owned assets; original cloud/lightning SVGs, native EDC variants and remote build script added. SVG XML parsing, shell syntax and asset/reference checks pass. Edje compiler is unavailable locally; no remote build, desktop apply or performance PASS claimed. Artwork is a first visual candidate, including a generated distant castle detail; user review pending. Next action: remote compile/render proof and visual adjustment, then choose existing theme artwork targets.
+
+## BK-002 — distant castle variant, 2026-10-10
+Plan: preserve scene.png; generate scene-v2.png with an original distant left-side stone castle inspired by broad square crenellated towers in user screenshot. Keep knight/moon/palette. No screenshot artwork copied. Rollback: remove variant and revert BK-002 commit. Acceptance: visual candidate saved with provenance; animation/runtime status remains unchanged.
+
+BK-002 result: scene-v2.png inspected and saved with distant left ridge castle and faint warm windows; original scene.png retained. Knight/moon composition remains visually consistent. No animation source or desktop change; variant not yet selected as build default.

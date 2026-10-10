@@ -4,3 +4,5 @@ Run build.sh through the BKC remote build path with verified EFL/edje_cc and SVG
 MVP animation: slow cloud-shadow layer crossing the moon region and a restrained localized lightning stroke after a 28–46 second delay. No full-screen flash or eye animation. Layered fog/parallax and scene relighting are future refinements, not implemented claims.
 Still PNG/EDJ is the low-motion choice. Animated transitions can still redraw at display rate despite their slow duration; measure target CPU/memory before choosing default. Hidden-desktop pause requires host wiring/runtime proof; bk,pause and bk,resume signals are available to a preview host.
 Current scene fills the output; differing aspect ratios may distort it. Validate laptop 1600x900 and external 1920x1080 first (both 16:9); define crop/letterbox policy separately for other sizes.
+
+scene-v2.png is the BK-002 distant left-castle candidate, kept separately for visual review. Current EDC still references scene.png.

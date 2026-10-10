@@ -7,5 +7,11 @@
     "origin": "Original built-in imagegen generation from written user concept; no third-party reference images supplied"
   },
   "overlays": "Original SVG cloud-shadow and lightning drawings",
-  "status": "Still artwork inspected; Edje compilation/render/performance pending"
+  "status": "Still artwork inspected; Edje compilation/render/performance pending",
+  "castle_variant": {
+    "file": "scene-v2.png",
+    "sha256": "53df7e6525ddb28a804573be886ef88124418347a95cfaaa5bc041a780283b0a",
+    "origin": "Original scene edit; square-tower castle architecture informed by user screenshot, no photograph supplied to generator",
+    "status": "visual candidate; original scene preserved"
+  }
 }
