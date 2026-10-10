@@ -48,3 +48,8 @@ BK-005 result: recovered and inspected Sci-Fi embedded source text; documented s
 ## BK-005 follow-up — bundled wallpaper references
 Plan: locate user-named wallpapers and inspect available editable source; documentation only. Rollback: revert follow-up commit.
 Result: found installed E23 Sci-Fi, Oh-v1 and blackhole-pclos-bt2 wallpaper packages. Oh-v1 source confirms two texture-origin drift loops (55/65 seconds). Black identity is provisional; its internals remain uninspected.
+
+## BK-006 — forged-blue material second pass
+Plan: create an original raster concept sheet for richer window chrome and shelf materials, guided by verified E state mechanisms. Preserve the first SVG and all runtime sources. Rollback: revert concept/doc additions. Acceptance: focused/inactive material contrast, readable compact controls, separate emissive accents and explicit concept-only status.
+
+BK-006 result: generated and visually inspected an original forged-blue concept sheet, saved with SHA-256 provenance. Focused/inactive chrome and shelf share textured steel, bevels and separate light accents. Existing SVG, wallpaper and EDC preserved. Material-to-part mapping documented; incidental generated copy excluded from product direction. Diff checks passed. This is a visual candidate, not dimensioned assets, a compiled theme or animation/runtime acceptance.

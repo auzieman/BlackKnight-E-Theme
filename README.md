@@ -17,3 +17,5 @@ Work from development into feature/<topic>; merge accepted features back to deve
 First wallpaper pass: [BlackKnight MVP](themes/blackknight/README.md), [still artwork](themes/blackknight/assets/scene.png), and [source study/tutorial notes](docs/wallpaper-mvp.md). Animated EDJ compilation/runtime validation remains pending.
 
 Deep reference study: [Sci-Fi and Transient-Color mechanisms](docs/theme-mechanisms.md), including active state chains, dormant filters and artwork adaptation boundaries.
+
+Second material pass: [forged-blue chrome study](docs/blue-steel-pass.md), with focused/inactive and shelf concepts.
