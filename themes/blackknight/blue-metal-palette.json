@@ -1,0 +1,23 @@
+{
+  "format": "blackknight-palette-v1",
+  "colors": {
+    "shadow": "#081525",
+    "steel_dark": "#142d48",
+    "steel": "#285781",
+    "steel_light": "#568db5",
+    "edge": "#95c9ed",
+    "focus": "#61baff",
+    "text": "#e4eff8",
+    "inactive": "#294359"
+  },
+  "status": "original visual proposal; not yet applied to theme assets",
+  "base_candidate": "Transient-Color",
+  "artwork_targets": [
+    "frame_base_4x.png",
+    "frame_fill_4x.png",
+    "frame_clicked.png",
+    "e17_border6b.png",
+    "inset_bar_vert_base.png"
+  ],
+  "constraint": "preserve part geometry, image dimensions, stretch borders and interaction signals"
+}

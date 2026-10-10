@@ -31,3 +31,8 @@ BK-002 result: scene-v2.png inspected and saved with distant left ridge castle a
 Plan: select castle variant, replace independent timers with cloud-cover -> strike -> fade -> clear -> invisible reset sequence. Preserve still mode and original artwork. Rollback: revert BK-003. Acceptance: source has one cycle, all animated states reset; compile/render/performance remain pending remote evidence.
 
 BK-003 result: castle variant selected; synchronized loop source and stronger cloud-shadow layer prepared. All four animated parts reset before the quiet interval; still build excludes animation. SVG parsing, shell syntax and diff checks passed. Clean-loop behaviour is designed but not yet rendered/compiled; no physical relighting or runtime PASS claimed.
+
+## BK-004 — EDJ attempt and bluer metal, 2026-10-10
+Plan: check existing compiler/build route; prepare original blue-metal palette preview and existing-theme artwork targets. Preserve layout and upstream sources. Rollback: revert new palette files. Build evidence: edje_cc absent locally; read-only SSH to lab-ai-worker failed with No route to host. No remote mutation attempted.
+
+BK-004 result: original blue-metal SVG preview and palette/asset map prepared. SVG XML and JSON parse checks passed; theme geometry/assets unchanged. EDJ build remains blocked by unavailable local compiler and unreachable approved remote worker. No EDJ or rendering PASS claimed.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460">
+<defs><linearGradient id="steel" x2="0" y2="1"><stop stop-color="#95c9ed"/><stop offset=".12" stop-color="#568db5"/><stop offset=".48" stop-color="#285781"/><stop offset=".52" stop-color="#142d48"/><stop offset="1" stop-color="#285781"/></linearGradient></defs>
+<rect width="960" height="460" fill="#081525"/>
+<g font-family="sans-serif" fill="#e4eff8"><text x="40" y="42" font-size="20">BlackKnight · bluer steel artwork direction</text>
+<rect x="40" y="72" width="880" height="310" rx="7" fill="#142d48" stroke="#568db5" stroke-width="3"/>
+<rect x="42" y="74" width="876" height="42" rx="5" fill="url(#steel)"/>
+<text x="60" y="101" font-size="16">Active window — ice-blue edge, blue steel bevel</text>
+<text x="836" y="101" font-size="20">−  □  ×</text>
+<rect x="44" y="118" width="872" height="44" fill="url(#steel)"/>
+<text x="64" y="146" font-size="15">File     Edit     View     Tools</text>
+<rect x="54" y="172" width="852" height="196" fill="#081525" stroke="#285781"/>
+<rect x="78" y="208" width="150" height="36" rx="4" fill="url(#steel)" stroke="#61baff"/>
+<text x="108" y="232" font-size="14">Focused button</text>
+<rect x="250" y="208" width="150" height="36" rx="4" fill="#294359" stroke="#568db5"/>
+<text x="278" y="232" font-size="14">Inactive button</text>
+<text x="80" y="286" font-size="15">Original material preview; existing theme geometry stays intact.</text>
+<text x="40" y="420" font-size="14">Concept only · no theme applied · static gradients, no continuous effects</text></g></svg>

@@ -5,3 +5,5 @@ BK-003 cycle: 12 seconds quiet -> 18 seconds clouds cover moon/dim scene -> 0.08
 The glow is an MVP translucent illumination overlay, not physical per-object relighting. Existing painted clouds remain part of the base image; the moving cloud-shadow layer obscures them. True layered parallax is later work.
 Still variant contains no animation parts/programs. Slow transitions may still redraw at display rate; laptop CPU/memory and hidden-desktop pause must be measured. bk,pause resets overlays; bk,resume restarts after the quiet interval. Host signal integration is not proved.
 No EDJs compiled, desktop applied or performance acceptance claimed. Native 16:9 layout; other aspect-ratio policy pending.
+
+Blue-metal-palette.json and ../../docs/images/blue-metal-preview.svg propose a bluer static metal treatment. Existing Transient-Color artwork is the candidate base, not yet altered. Preserve dimensions/stretch regions and source notices during adaptation.
