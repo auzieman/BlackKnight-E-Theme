@@ -1,0 +1,1 @@
+Place original replacement artwork here using the paths and dimensions in ../asset-contract.json. No replacements are approved yet. Keep glints separate from base metal. Do not place the concept sheet directly into the titlebar.

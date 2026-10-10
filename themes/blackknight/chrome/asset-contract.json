@@ -1,0 +1,70 @@
+{
+  "base": "E20-Scifi-theme",
+  "source_location": "/home/auzieman/Projects/AmigaAITests/gpt/amiga-dev-vagrant/E20-Scifi-theme",
+  "license_status": "not established; no upstream files vendored or distribution approved",
+  "groups": [
+    "e/widgets/border/default/border",
+    "e/shelf/default/base"
+  ],
+  "assets": [
+    {
+      "path": "wrk/e17_titlebar.png",
+      "width": 200,
+      "height": 24,
+      "sha256": "b167be20707df903a7ec69d33ad65198fb3c1fa8091435f94cf0c973a69b1a55"
+    },
+    {
+      "path": "wrk/e17_titlebar_outline.png",
+      "width": 200,
+      "height": 24,
+      "sha256": "b91b2c37079b730e1712002eea0ac65b7ca3900cb96c2c282f3e822b4e772ab3"
+    },
+    {
+      "path": "wrk/e17_titlebar_shadow1.png",
+      "width": 200,
+      "height": 24,
+      "sha256": "b91b2c37079b730e1712002eea0ac65b7ca3900cb96c2c282f3e822b4e772ab3"
+    },
+    {
+      "path": "wrk/e17_titlebar_shadow2.png",
+      "width": 200,
+      "height": 24,
+      "sha256": "b91b2c37079b730e1712002eea0ac65b7ca3900cb96c2c282f3e822b4e772ab3"
+    },
+    {
+      "path": "wrk/e17_titlebar_glint1.png",
+      "width": 34,
+      "height": 13,
+      "sha256": "7f0490318681e1571f713e2d703d500421ecc64ec2f545ae07e4e8a6b48277d5"
+    },
+    {
+      "path": "wrk/e17_titlebar_glint2.png",
+      "width": 169,
+      "height": 18,
+      "sha256": "e8b9534c198f7d207631e1b710c03b8be63fac1fc98242e69e7427c000c9a1d9"
+    },
+    {
+      "path": "wrk/e17_titlebar_glint3.png",
+      "width": 34,
+      "height": 13,
+      "sha256": "f6586c8fd8a0ef164160f85548e8c38c1a292757fc0957901525447f9bdb289d"
+    },
+    {
+      "path": "wrk/shelf_bar.png",
+      "width": 296,
+      "height": 101,
+      "sha256": "e6234a3221ffef902bb4d8a266b277423cdf43294e1f13bc3e771bcfc41af31e"
+    },
+    {
+      "path": "wrk/e17_shelf_bg3_v.png",
+      "width": 101,
+      "height": 296,
+      "sha256": "3ac73fc263271681087dd652c6ac925dccac746e730e5c843ab90d08a233c46a"
+    }
+  ],
+  "rules": [
+    "Retain dimensions and alpha intent",
+    "Retain EDC geometry, clipping, image borders and signals",
+    "Render focus/inactive/hover/pressed and horizontal/vertical shelf before acceptance"
+  ]
+}

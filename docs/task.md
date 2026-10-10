@@ -53,3 +53,8 @@ Result: found installed E23 Sci-Fi, Oh-v1 and blackhole-pclos-bt2 wallpaper pack
 Plan: create an original raster concept sheet for richer window chrome and shelf materials, guided by verified E state mechanisms. Preserve the first SVG and all runtime sources. Rollback: revert concept/doc additions. Acceptance: focused/inactive material contrast, readable compact controls, separate emissive accents and explicit concept-only status.
 
 BK-006 result: generated and visually inspected an original forged-blue concept sheet, saved with SHA-256 provenance. Focused/inactive chrome and shelf share textured steel, bevels and separate light accents. Existing SVG, wallpaper and EDC preserved. Material-to-part mapping documented; incidental generated copy excluded from product direction. Diff checks passed. This is a visual candidate, not dimensioned assets, a compiled theme or animation/runtime acceptance.
+
+## BK-007 — Sci-Fi artwork overlay preparation
+Plan: map newly located editable Sci-Fi source, record original dimensions/hashes and add isolated remote build staging. Keep upstream source and installed theme untouched. Rollback: revert BK-007 files. Acceptance: explicit asset contract and build inputs; no compatibility or artwork completion claim.
+
+BK-007 result: located full editable Sci-Fi tree with border and shelf EDC, created nine-asset dimension/hash contract and separate staging/build recipe. No replacement artwork yet; overlay is deliberately empty. Shell syntax and JSON validation passed; compiler unavailable and runtime proof pending. Next: author dimensioned plates/glints from the approved material direction and compare staged source to installed base.
