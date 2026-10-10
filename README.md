@@ -1,6 +1,6 @@
 # BlackKnight theme/tutorial kit
 
-Independent local project scaffold; no product implementation or release yet.
+Independent theme/tutorial project with original wallpaper artwork, a compiled native raster-material test, and a full desktop adaptation under validation. No release has been tagged.
 
 Read [brief](docs/brief.md), [feature map](docs/feature-map.md), [active task](docs/task.md), [shared design/ownership contract](docs/project-contract.md), [branching](docs/branching.md) and [remote toolchain](docs/toolchain.md).
 

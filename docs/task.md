@@ -1,4 +1,8 @@
-# Active task — alignment preparation
+# Active task — BK-013 desktop trial
+
+Current objective: compile the full Sci-Fi-based BlackKnight titlebar adaptation, test on the laptop with an independent 20-second restore, and confirm the original theme after rollback. The user’s sample windows stay open. The e-desktop-theme skill and official-reference guide have been added and validated. Historical task records follow.
+
+## Initial alignment preparation
 Date: 2026-10-10
 Objective: establish the theme project's scope and reusable visual workflow.
 Planned mutation: planning documents and skill only. Rollback: remove new scaffold files.
@@ -97,3 +101,5 @@ Further compile evidence: fca7429d failed because -I is unsupported by this Edje
 Run 4c3816fb failed on an existing invalid media button state: elm,anim,activate targeted clicked on shadow1/shadow2, which define only default/selected. Staged compatibility fix uses their existing selected (pressed) state, retaining the action signals and 0.5-second reset. Independent watchdog mock test passed: a preview exiting immediately still produced RESTORED OriginalTheme and a return restart after the trial interval.
 
 Run 440587e7 reached the next source error: genlist edit odd-state program requested value 1.0 while the part defines odd at 0.0. Related list (two sites) and gengrid macro share the same mismatch; inspected and corrected all four staged targets to the existing 0.0 descriptions. No new states/actions introduced.
+
+Run 03edb638 failed on a submenu base missing visible. Compatibility patch adds visible inheriting default only in elm/hover/base/main_menu_submenu/default, retaining transparency/geometry/input. Staging guard caught two similar parts. An unchanged retry 016799ae was accidentally queued after the guard failure; its own temporary compiler service was targeted for removal. No desktop application occurred. Subsequent staging shell stops on any failed precondition.

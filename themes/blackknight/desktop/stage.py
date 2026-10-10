@@ -40,6 +40,11 @@ for name,count in [("genlist.edc",1),("list.edc",2),("gengrid.edc",1)]:
  f=a.output/"edc/elm"/name;data=f.read_text()
  assert data.count('action: STATE_SET "odd" 1.0;')==count
  f.write_text(data.replace('action: STATE_SET "odd" 1.0;', 'action: STATE_SET "odd" 0.0;'))
+m=a.output/"edc/elm/menu.edc";menus=m.read_text()
+marker='      part { name: "base"; type: RECT; repeat_events: 1;\n         description { state: "default" 0.0;\n            color: 0 0 0 0;\n         }\n      }'
+first=menus.index('group { name: "elm/hover/base/main_menu_submenu/default";')
+assert menus[first:].count(marker)==1
+m.write_text(menus[:first]+menus[first:].replace(marker,'      part { name: "base"; type: RECT; repeat_events: 1;\n         description { state: "default" 0.0;\n            color: 0 0 0 0;\n         }\n         description { state: "visible" 0.0; inherit: "default" 0.0; }\n      }'))
 shutil.copy2(root/"master/blue-steel/assets/plate.png",a.output/"wrk/bk-blue-plate.png")
 manifest={"base_border_sha256":hashlib.sha256(original.encode()).hexdigest(),"adapted_border_sha256":hashlib.sha256(text.encode()).hexdigest(),"plate_sha256":hashlib.sha256((a.output/"wrk/bk-blue-plate.png").read_bytes()).hexdigest(),"scope":"default window titlebar material; upstream geometry/actions/effects retained","distribution":"private local study; upstream licensing not established"}
 (a.output/"blackknight-source.json").write_text(json.dumps(manifest,indent=2)+"\n")
