@@ -1,6 +1,8 @@
 #!/bin/sh
 # Run through the approved remote BKC build route.
 set -eu
+echo "SVG-derived overlay retired. Build master/blue-steel/material.edc for the raster demonstration." >&2
+exit 1
 if [ "$#" -ne 2 ]; then
   echo "Usage: sh build.sh EDITABLE_SCIFI_TREE NEW_OUTPUT_DIRECTORY" >&2
   exit 2

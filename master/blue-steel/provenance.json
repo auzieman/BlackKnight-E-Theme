@@ -1,0 +1,36 @@
+{
+  "task": "BK-010",
+  "method": "built-in image_gen; original raster artwork from approved original concept reference",
+  "reference": "docs/images/blue-metal-preview-v2.png",
+  "assets": [
+    {
+      "path": "assets/button.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "911eb8b338d59ab87e40afebebe0b37a37ab0e0e7bc7b2340bf87bf4af490a21",
+      "png_color_type": 6
+    },
+    {
+      "path": "assets/glint.png",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "sha256": "a25219fd05e503ae702410de845d6de1c2af4b2234875f9750398758bc6b0b02",
+      "png_color_type": 6
+    },
+    {
+      "path": "assets/plate.png",
+      "dimensions": [
+        2171,
+        724
+      ],
+      "sha256": "f932d5f2b2ffc4460364d6b64071c95206439ea9672e89d6de54321af2fc1b2f",
+      "png_color_type": 6
+    }
+  ],
+  "status": "source demonstration; Edje compile/render pending",
+  "notes": "Generated plate contains transparent bottom padding. EDC extends the plate below the titlebar clip and uses scaled source borders; these source measurements are initial candidates requiring native render adjustment."
+}

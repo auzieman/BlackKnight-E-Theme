@@ -24,3 +24,5 @@ The concept sheet illustrates material and states, not an exact replacement geom
 Wallpaper direction stays the accepted knight/castle scene. Oh-v1's different-speed tiled texture origins are a useful next cloud technique; tileable transparent textures must be authored and the reset visually verified before changing the current storm loop. The strike should remain synchronized to moon cover, followed by recovery to the same starting state.
 
 Acceptance still needs a target render: compact/wide titlebars, rapid focus/hover changes, legibility, shelf orientation and idle cost. No continuous chrome animation is added by this concept. Remote compilation and licensing of any adapted upstream base remain pending.
+
+Implementation direction is now [raster material with native Edje parts](../master/blue-steel/README.md). The SVG-derived asset set is retired; these source demonstrations still need native rendering before visual acceptance.

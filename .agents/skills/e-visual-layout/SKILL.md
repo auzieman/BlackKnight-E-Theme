@@ -10,3 +10,5 @@ Record source revisions/provenance, how the preview was produced and remaining u
 Build tutorial steps from verified editable examples. Keep unrelated redesigns and new features in follow-ups.
 
 For existing-theme adaptation, read ../../../docs/theme-mechanisms.md. Trace signals/program targets before claiming an effect executes; preserve image borders, clipping, swallowed parts and pointer/action contracts during artwork changes.
+
+For the approved forged-metal direction, retain raster material detail. Decompose it into plates, caps, edge strips, control sprites and transparent effects; use EDC for placement, live text, clipping, signals and states. Do not replace approved raster materials with simplified vector gradients. Native rendering, not a concept sheet, proves assembly.
