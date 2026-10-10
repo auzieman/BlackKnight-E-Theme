@@ -26,3 +26,8 @@ BK-001 result: original still scene inspected and saved in theme-owned assets; o
 Plan: preserve scene.png; generate scene-v2.png with an original distant left-side stone castle inspired by broad square crenellated towers in user screenshot. Keep knight/moon/palette. No screenshot artwork copied. Rollback: remove variant and revert BK-002 commit. Acceptance: visual candidate saved with provenance; animation/runtime status remains unchanged.
 
 BK-002 result: scene-v2.png inspected and saved with distant left ridge castle and faint warm windows; original scene.png retained. Knight/moon composition remains visually consistent. No animation source or desktop change; variant not yet selected as build default.
+
+## BK-003 — synchronized storm loop, 2026-10-10
+Plan: select castle variant, replace independent timers with cloud-cover -> strike -> fade -> clear -> invisible reset sequence. Preserve still mode and original artwork. Rollback: revert BK-003. Acceptance: source has one cycle, all animated states reset; compile/render/performance remain pending remote evidence.
+
+BK-003 result: castle variant selected; synchronized loop source and stronger cloud-shadow layer prepared. All four animated parts reset before the quiet interval; still build excludes animation. SVG parsing, shell syntax and diff checks passed. Clean-loop behaviour is designed but not yet rendered/compiled; no physical relighting or runtime PASS claimed.

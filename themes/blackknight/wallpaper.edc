@@ -1,6 +1,6 @@
-// Original BK-001 source. Same base plate for still and animated builds.
+// BK-003: one synchronized storm cycle; invisible cloud reset avoids a seam.
 images {
- image: "scene.png" LOSSY 92;
+ image: "scene-v2.png" LOSSY 92;
 #ifdef ANIMATED
  image: "clouds.svg" COMP;
  image: "lightning.svg" COMP;
@@ -12,55 +12,73 @@ collections {
   data { item: "style" "4"; }
   parts {
    part { name: "scene"; type: IMAGE; mouse_events: 0;
-    description { state: "default" 0.0; image.normal: "scene.png"; }
+    description { state: "default" 0.0; image.normal: "scene-v2.png"; }
    }
 #ifdef ANIMATED
+   part { name: "moonlight"; type: RECT; mouse_events: 0;
+    description { state: "default" 0.0; color: 2 7 18 0; }
+    description { state: "covered" 0.0; inherit: "default" 0.0; color: 2 7 18 55; }
+    description { state: "passed" 0.0; inherit: "default" 0.0; }
+   }
    part { name: "clouds"; type: IMAGE; mouse_events: 0;
     description { state: "default" 0.0;
-     rel1.relative: -0.22 0.03; rel2.relative: 0.98 0.34;
-     image.normal: "clouds.svg";
+     rel1.relative: -0.65 0.0; rel2.relative: 0.15 0.34;
+     image.normal: "clouds.svg"; color: 255 255 255 0;
     }
-    description { state: "crossed" 0.0; inherit: "default" 0.0;
-     rel1.relative: 0.0 0.04; rel2.relative: 1.2 0.35;
+    description { state: "covered" 0.0; inherit: "default" 0.0;
+     rel1.relative: -0.02 0.0; rel2.relative: 0.78 0.34;
+     color: 255 255 255 255;
     }
+    description { state: "passed" 0.0; inherit: "default" 0.0;
+     rel1.relative: 0.65 0.0; rel2.relative: 1.45 0.34;
+    }
+   }
+   part { name: "storm-glow"; type: RECT; mouse_events: 0;
+    description { state: "default" 0.0; color: 155 193 230 0; }
+    description { state: "lit" 0.0; inherit: "default" 0.0; color: 155 193 230 42; }
    }
    part { name: "lightning"; type: IMAGE; mouse_events: 0;
     description { state: "default" 0.0;
-     rel1.relative: 0.39 0.0; rel2.relative: 0.60 0.55;
+     rel1.relative: 0.30 0.0; rel2.relative: 0.68 0.82;
      image.normal: "lightning.svg"; color: 255 255 255 0;
     }
-    description { state: "lit" 0.0; inherit: "default" 0.0; color: 255 255 255 120; }
+    description { state: "lit" 0.0; inherit: "default" 0.0; color: 255 255 255 255; }
    }
 #endif
   }
 #ifdef ANIMATED
   programs {
-   program { name: "cloud-out"; signal: "load"; source: "";
-    action: STATE_SET "crossed" 0.0; target: "clouds";
-    transition: SINUSOIDAL 75.0; after: "cloud-back";
+   program { name: "cycle"; signal: "load"; source: "";
+    in: 12.0 0.0; action: STATE_SET "covered" 0.0;
+    target: "clouds"; target: "moonlight";
+    transition: SINUSOIDAL 18.0; after: "strike";
    }
-   program { name: "cloud-back";
-    action: STATE_SET "default" 0.0; target: "clouds";
-    transition: SINUSOIDAL 75.0; after: "cloud-out";
+   program { name: "strike";
+    action: STATE_SET "lit" 0.0; target: "lightning"; target: "storm-glow";
+    transition: LINEAR 0.08; after: "fade";
    }
-   program { name: "storm-wait"; signal: "load"; source: "";
-    in: 28.0 18.0; action: STATE_SET "lit" 0.0; target: "lightning";
-    transition: LINEAR 0.18; after: "storm-fade";
+   program { name: "fade";
+    action: STATE_SET "default" 0.0; target: "lightning"; target: "storm-glow";
+    transition: DECELERATE 0.9; after: "clear-clouds";
    }
-   program { name: "storm-fade";
-    action: STATE_SET "default" 0.0; target: "lightning";
-    transition: DECELERATE 0.9; after: "storm-wait";
+   program { name: "clear-clouds";
+    action: STATE_SET "passed" 0.0; target: "clouds"; target: "moonlight";
+    transition: SINUSOIDAL 22.0; after: "reset";
    }
-   // Hosting preview can signal pause; E's hidden-desktop behaviour needs proof.
+   program { name: "reset";
+    action: STATE_SET "default" 0.0; target: "clouds"; target: "moonlight";
+    target: "lightning"; target: "storm-glow"; after: "cycle";
+   }
    program { name: "pause"; signal: "bk,pause"; source: "*";
-    action: ACTION_STOP; target: "cloud-out"; target: "cloud-back";
-    target: "storm-wait"; target: "storm-fade";
-    after: "clear-strike";
+    action: ACTION_STOP; target: "cycle"; target: "strike";
+    target: "fade"; target: "clear-clouds"; target: "reset";
+    after: "paused-baseline";
    }
-   program { name: "clear-strike"; action: STATE_SET "default" 0.0; target: "lightning"; }
-   program { name: "resume"; signal: "bk,resume"; source: "*";
-    after: "cloud-out"; after: "storm-wait";
+   program { name: "paused-baseline";
+    action: STATE_SET "default" 0.0; target: "clouds"; target: "moonlight";
+    target: "lightning"; target: "storm-glow";
    }
+   program { name: "resume"; signal: "bk,resume"; source: "*"; after: "cycle"; }
   }
 #endif
  }

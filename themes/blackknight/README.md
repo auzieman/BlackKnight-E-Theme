@@ -1,8 +1,7 @@
 # BlackKnight wallpaper MVP
-Original scene.png is the still wallpaper. wallpaper.edc provides matching still and animated e/desktop/background groups. Assets are original generated scene artwork plus original SVG overlays; no artist reference images copied.
-Run build.sh through the BKC remote build path with verified EFL/edje_cc and SVG-loader support. Outputs: blackknight-still.edj and blackknight-animated.edj. These have not yet been compiled or applied.
-MVP animation: slow cloud-shadow layer crossing the moon region and a restrained localized lightning stroke after a 28–46 second delay. No full-screen flash or eye animation. Layered fog/parallax and scene relighting are future refinements, not implemented claims.
-Still PNG/EDJ is the low-motion choice. Animated transitions can still redraw at display rate despite their slow duration; measure target CPU/memory before choosing default. Hidden-desktop pause requires host wiring/runtime proof; bk,pause and bk,resume signals are available to a preview host.
-Current scene fills the output; differing aspect ratios may distort it. Validate laptop 1600x900 and external 1920x1080 first (both 16:9); define crop/letterbox policy separately for other sizes.
-
-scene-v2.png is the BK-002 distant left-castle candidate, kept separately for visual review. Current EDC still references scene.png.
+Selected base: assets/scene-v2.png, original knight landscape with distant left castle. scene.png remains the first candidate.
+wallpaper.edc builds e/desktop/background as still or animated EDJ. Run sh build.sh through BKC's remote build path with verified EFL/edje_cc and SVG-loader support.
+BK-003 cycle: 12 seconds quiet -> 18 seconds clouds cover moon/dim scene -> 0.08 second large branching strike/glow -> 0.9 second fade -> 22 seconds clouds clear -> invisible cloud-position reset. Approximately 53 seconds per cycle. All animated parts return to baseline; actual seam/render behaviour awaits E validation.
+The glow is an MVP translucent illumination overlay, not physical per-object relighting. Existing painted clouds remain part of the base image; the moving cloud-shadow layer obscures them. True layered parallax is later work.
+Still variant contains no animation parts/programs. Slow transitions may still redraw at display rate; laptop CPU/memory and hidden-desktop pause must be measured. bk,pause resets overlays; bk,resume restarts after the quiet interval. Host signal integration is not proved.
+No EDJs compiled, desktop applied or performance acceptance claimed. Native 16:9 layout; other aspect-ratio policy pending.
