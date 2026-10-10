@@ -1,0 +1,8 @@
+{
+  "source": "micro-blog/content/assets/brand/auzietek-crest.png",
+  "source_sha256": "fe2611d65f5635a6b2ffe6ed85519df81617d59b8fd61954c2ce6478d2e6ef62",
+  "selected_by_user": "AuzieTek griffin shield",
+  "method": "shield crop 400x424 at 35,0; black ink isolated by luminance threshold 170; ice-blue tint; scaled/padded to 128x128",
+  "logo_sha256": "cbda57b2af1a7be193f13607ab34b8acb6e72ea7b1b40f2c5daf02100ef6dd42",
+  "animation": "39 donor start slots use same griffin bitmap; existing behavior retained, donor PC animation artwork removed"
+}

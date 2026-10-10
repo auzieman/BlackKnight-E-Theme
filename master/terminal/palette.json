@@ -1,0 +1,51 @@
+{
+  "name": "BlackKnight Ice",
+  "reference": "installed Fir Dark (BSD-2-Clause); solarized-inspired contrast, original ice-blue colors",
+  "normal": {
+    "def": "BDD3DB",
+    "black": "122632",
+    "red": "E87881",
+    "green": "8FCBAA",
+    "yellow": "D4B87A",
+    "blue": "5D9FC5",
+    "magenta": "B7A3CB",
+    "cyan": "70CBD7",
+    "white": "C5DDE5",
+    "inverse_fg": "071820",
+    "inverse_bg": "C5DDE5"
+  },
+  "bright": {
+    "def": "DCEFF3",
+    "black": "547484",
+    "red": "FFA0A6",
+    "green": "B5E2C5",
+    "yellow": "E8D298",
+    "blue": "8CCEF0",
+    "magenta": "D2BDE5",
+    "cyan": "A7EDF3",
+    "white": "EDF8FA",
+    "inverse_fg": "071820",
+    "inverse_bg": "DCEFF3"
+  },
+  "faint": {
+    "def": "88989E",
+    "black": "0D1B24",
+    "red": "A7565D",
+    "green": "67927A",
+    "yellow": "998458",
+    "blue": "43728E",
+    "magenta": "847592",
+    "cyan": "51929B",
+    "white": "8E9FA5",
+    "inverse_fg": "051117",
+    "inverse_bg": "8E9FA5"
+  },
+  "ui": {
+    "def": "BDD3DB",
+    "fg": "BDD3DB",
+    "bg": "071820",
+    "main": "70CBD7",
+    "hl": "EDF8FA",
+    "end_sel": "36677A"
+  }
+}

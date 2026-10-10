@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-static const char *slots[]={"default_top_left_corner","default_top_titlebar","default_top_right_corner","default_left_border_mid","default_left_border_top","default_right_border","default_bottom_right_corner","default_bottom_right","default_bottom_mid","default_bottom_left","default_bottom_left_corner","e17_mini_button","e17_shelf_bg2_h","e17_shelf_bg2_v","e17_shelf_bg3_v","shelf_bar","shelf_bottom","shelf_top","shelf_bottom_left","shelf_bottom_right","shelf_top_left","shelf_top_right","shelf_mid_left","shelf_mid_right","shelf_ibar_bg"};
+static const char *slots[]={"default_top_left_corner","default_top_titlebar","default_top_right_corner","default_left_border_mid","default_left_border_top","default_right_border","default_bottom_right_corner","default_bottom_right","default_bottom_mid","default_bottom_left","default_bottom_left_corner","e17_mini_button","e17_shelf_bg2_h","e17_shelf_bg2_v","e17_shelf_bg3_v","shelf_bar","shelf_bottom","shelf_top","shelf_bottom_left","shelf_bottom_right","shelf_top_left","shelf_top_right","shelf_mid_left","shelf_mid_right","shelf_ibar_bg","logo/start/variant0","logo/start/variant1","logo/start/variant2","logo/start/variant3","logo/start/variant4","logo/start/variant5","logo/start/variant6","logo/start/variant7","logo/start/variant8","logo/start/variant9","logo/start/variant10","logo/start/variant11","logo/start/variant12","logo/start/variant13","logo/start/variant14","logo/start/variant15","logo/start/variant16","logo/start/variant17","logo/start/variant18","logo/start/variant19","logo/start/variant20","logo/start/variant21","logo/start/variant22","logo/start/variant23","logo/start/variant24","logo/start/variant25","logo/start/variant26","logo/start/variant27","logo/start/variant28","logo/start/variant29","logo/start/variant30","logo/start/variant31","logo/start/variant32","logo/start/variant33","logo/start/variant34","logo/start/variant35","logo/start/variant36","logo/start/variant37","logo/start/variant38"};
 #define SLOT_COUNT (sizeof(slots)/sizeof(slots[0]))
 int main(int argc,char **argv) {
  if(argc!=4){fprintf(stderr,"Usage: %s ORIGINAL_EDJ COPIED_EDJ ASSET_DIR\n",argv[0]);return 2;}
@@ -19,7 +19,7 @@ int main(int argc,char **argv) {
  if(!edje_object_file_set(obj,argv[2],"e/widgets/border/default/border"))return 1;
  int ids[SLOT_COUNT];char name[256];
  for(int i=0;i<(int)SLOT_COUNT;i++){
-  snprintf(name,sizeof name,"wrk/%s.png",slots[i]);ids[i]=edje_edit_image_id_get(obj,name);
+  snprintf(name,sizeof name,strchr(slots[i],'/') ? "%s.png" : "wrk/%s.png",slots[i]);ids[i]=edje_edit_image_id_get(obj,name);
   if(ids[i]<0){fprintf(stderr,"Missing donor image %s\n",name);return 1;}
  }
  evas_object_del(obj);

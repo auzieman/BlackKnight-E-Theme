@@ -1,9 +1,21 @@
-// BK-003: one synchronized storm cycle; invisible cloud reset avoids a seam.
+#ifdef BK_PREVIEW
+#define BK_HOLD 2.0
+#define BK_COVER 6.0
+#define BK_CLEAR 6.0
+#define BK_SKY_HALF 12.0
+#else
+#define BK_HOLD 12.0
+#define BK_COVER 18.0
+#define BK_CLEAR 22.0
+#define BK_SKY_HALF 45.0
+#endif
+// Two depth layers: slow distant wisps and a nearer synchronized storm bank.
+// Each cloud resets only at zero opacity; the accepted scene remains untouched.
 images {
  image: "scene-v2.png" LOSSY 92;
 #ifdef ANIMATED
- image: "clouds.svg" COMP;
- image: "lightning.svg" COMP;
+ image: "clouds-v2.png" COMP;
+ image: "lightning-v2.png" COMP;
 #endif
 }
 collections {
@@ -15,19 +27,32 @@ collections {
     description { state: "default" 0.0; image.normal: "scene-v2.png"; }
    }
 #ifdef ANIMATED
+   part { name: "distant-clouds"; type: IMAGE; mouse_events: 0;
+    description { state: "default" 0.0;
+     rel1.relative: -0.55 0.025; rel2.relative: 0.10 0.205;
+     image.normal: "clouds-v2.png"; color: 150 175 195 0;
+    }
+    description { state: "drift" 0.0; inherit: "default" 0.0;
+     rel1.relative: 0.05 0.025; rel2.relative: 0.70 0.205;
+     color: 150 175 195 65;
+    }
+    description { state: "passed" 0.0; inherit: "default" 0.0;
+     rel1.relative: 0.65 0.025; rel2.relative: 1.30 0.205;
+    }
+   }
    part { name: "moonlight"; type: RECT; mouse_events: 0;
     description { state: "default" 0.0; color: 2 7 18 0; }
-    description { state: "covered" 0.0; inherit: "default" 0.0; color: 2 7 18 55; }
+    description { state: "covered" 0.0; inherit: "default" 0.0; color: 2 7 18 90; }
     description { state: "passed" 0.0; inherit: "default" 0.0; }
    }
    part { name: "clouds"; type: IMAGE; mouse_events: 0;
     description { state: "default" 0.0;
      rel1.relative: -0.65 0.0; rel2.relative: 0.15 0.34;
-     image.normal: "clouds.svg"; color: 255 255 255 0;
+     image.normal: "clouds-v2.png"; color: 105 125 150 0;
     }
     description { state: "covered" 0.0; inherit: "default" 0.0;
      rel1.relative: -0.02 0.0; rel2.relative: 0.78 0.34;
-     color: 255 255 255 255;
+     color: 105 125 150 255;
     }
     description { state: "passed" 0.0; inherit: "default" 0.0;
      rel1.relative: 0.65 0.0; rel2.relative: 1.45 0.34;
@@ -35,12 +60,12 @@ collections {
    }
    part { name: "storm-glow"; type: RECT; mouse_events: 0;
     description { state: "default" 0.0; color: 155 193 230 0; }
-    description { state: "lit" 0.0; inherit: "default" 0.0; color: 155 193 230 42; }
+    description { state: "lit" 0.0; inherit: "default" 0.0; color: 155 193 230 96; }
    }
    part { name: "lightning"; type: IMAGE; mouse_events: 0;
     description { state: "default" 0.0;
      rel1.relative: 0.30 0.0; rel2.relative: 0.68 0.82;
-     image.normal: "lightning.svg"; color: 255 255 255 0;
+     image.normal: "lightning-v2.png"; color: 255 255 255 0;
     }
     description { state: "lit" 0.0; inherit: "default" 0.0; color: 255 255 255 255; }
    }
@@ -48,14 +73,28 @@ collections {
   }
 #ifdef ANIMATED
   programs {
+   program { name: "sky-drift"; signal: "load"; source: "";
+    action: STATE_SET "drift" 0.0; target: "distant-clouds";
+    transition: LINEAR BK_SKY_HALF; after: "sky-clear";
+   }
+   program { name: "sky-clear";
+    action: STATE_SET "passed" 0.0; target: "distant-clouds";
+    transition: LINEAR BK_SKY_HALF; after: "sky-reset";
+   }
+   program { name: "sky-reset";
+    action: STATE_SET "default" 0.0; target: "distant-clouds"; after: "sky-drift";
+   }
+   program { name: "covered-log"; action: SIGNAL_EMIT "bk,phase,covered" "wallpaper"; }
+   program { name: "strike-log"; action: SIGNAL_EMIT "bk,phase,strike" "wallpaper"; }
+   program { name: "reset-log"; action: SIGNAL_EMIT "bk,phase,reset" "wallpaper"; }
    program { name: "cycle"; signal: "load"; source: "";
-    in: 12.0 0.0; action: STATE_SET "covered" 0.0;
+    in: BK_HOLD 0.0; action: STATE_SET "covered" 0.0;
     target: "clouds"; target: "moonlight";
-    transition: SINUSOIDAL 18.0; after: "strike";
+    transition: SINUSOIDAL BK_COVER; after: "covered-log"; after: "strike";
    }
    program { name: "strike";
     action: STATE_SET "lit" 0.0; target: "lightning"; target: "storm-glow";
-    transition: LINEAR 0.08; after: "fade";
+    transition: LINEAR 0.08; after: "strike-log"; after: "fade";
    }
    program { name: "fade";
     action: STATE_SET "default" 0.0; target: "lightning"; target: "storm-glow";
@@ -63,22 +102,23 @@ collections {
    }
    program { name: "clear-clouds";
     action: STATE_SET "passed" 0.0; target: "clouds"; target: "moonlight";
-    transition: SINUSOIDAL 22.0; after: "reset";
+    transition: SINUSOIDAL BK_CLEAR; after: "reset";
    }
    program { name: "reset";
     action: STATE_SET "default" 0.0; target: "clouds"; target: "moonlight";
-    target: "lightning"; target: "storm-glow"; after: "cycle";
+    target: "lightning"; target: "storm-glow"; after: "reset-log"; after: "cycle";
    }
    program { name: "pause"; signal: "bk,pause"; source: "*";
     action: ACTION_STOP; target: "cycle"; target: "strike";
     target: "fade"; target: "clear-clouds"; target: "reset";
+    target: "sky-drift"; target: "sky-clear"; target: "sky-reset";
     after: "paused-baseline";
    }
    program { name: "paused-baseline";
     action: STATE_SET "default" 0.0; target: "clouds"; target: "moonlight";
-    target: "lightning"; target: "storm-glow";
+    target: "lightning"; target: "storm-glow"; target: "distant-clouds";
    }
-   program { name: "resume"; signal: "bk,resume"; source: "*"; after: "cycle"; }
+   program { name: "resume"; signal: "bk,resume"; source: "*"; after: "cycle"; after: "sky-drift"; }
   }
 #endif
  }

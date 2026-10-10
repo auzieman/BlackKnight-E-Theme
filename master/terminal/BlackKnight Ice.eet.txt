@@ -1,0 +1,388 @@
+group "Color_Scheme" struct {
+    value "version" int: 1;
+    value "md.version" int: 1;
+    value "md.name" string: "BlackKnight Ice";
+    value "md.author" string: "BlackKnight theme kit; derived from Terminology developers, mk-fg";
+    value "md.website" string: "";
+    value "md.license" string: "BSD-2-Clause";
+    group "def" struct {
+        group "Color" struct {
+            value "r" uchar: 189;
+            value "g" uchar: 211;
+            value "b" uchar: 219;
+            value "a" uchar: 255;
+        }
+    }
+    group "bg" struct {
+        group "Color" struct {
+            value "r" uchar: 7;
+            value "g" uchar: 24;
+            value "b" uchar: 32;
+            value "a" uchar: 255;
+        }
+    }
+    group "fg" struct {
+        group "Color" struct {
+            value "r" uchar: 189;
+            value "g" uchar: 211;
+            value "b" uchar: 219;
+            value "a" uchar: 255;
+        }
+    }
+    group "main" struct {
+        group "Color" struct {
+            value "r" uchar: 112;
+            value "g" uchar: 203;
+            value "b" uchar: 215;
+            value "a" uchar: 255;
+        }
+    }
+    group "hl" struct {
+        group "Color" struct {
+            value "r" uchar: 237;
+            value "g" uchar: 248;
+            value "b" uchar: 250;
+            value "a" uchar: 255;
+        }
+    }
+    group "end_sel" struct {
+        group "Color" struct {
+            value "r" uchar: 54;
+            value "g" uchar: 103;
+            value "b" uchar: 122;
+            value "a" uchar: 255;
+        }
+    }
+    group "tab_missed_1" struct {
+        group "Color" struct {
+            value "r" uchar: 255;
+            value "g" uchar: 153;
+            value "b" uchar: 51;
+            value "a" uchar: 255;
+        }
+    }
+    group "tab_missed_2" struct {
+        group "Color" struct {
+            value "r" uchar: 255;
+            value "g" uchar: 51;
+            value "b" uchar: 0;
+            value "a" uchar: 255;
+        }
+    }
+    group "tab_missed_3" struct {
+        group "Color" struct {
+            value "r" uchar: 255;
+            value "g" uchar: 0;
+            value "b" uchar: 0;
+            value "a" uchar: 255;
+        }
+    }
+    group "tab_missed_over_1" struct {
+        group "Color" struct {
+            value "r" uchar: 255;
+            value "g" uchar: 255;
+            value "b" uchar: 64;
+            value "a" uchar: 255;
+        }
+    }
+    group "tab_missed_over_2" struct {
+        group "Color" struct {
+            value "r" uchar: 255;
+            value "g" uchar: 153;
+            value "b" uchar: 51;
+            value "a" uchar: 255;
+        }
+    }
+    group "tab_missed_over_3" struct {
+        group "Color" struct {
+            value "r" uchar: 255;
+            value "g" uchar: 0;
+            value "b" uchar: 0;
+            value "a" uchar: 255;
+        }
+    }
+    group "tab_title_2" struct {
+        group "Color" struct {
+            value "r" uchar: 0;
+            value "g" uchar: 0;
+            value "b" uchar: 0;
+            value "a" uchar: 255;
+        }
+    }
+    group "Normal" struct {
+        group "Color_Block" struct {
+            group "def" struct {
+                group "Color" struct {
+                    value "r" uchar: 189;
+                    value "g" uchar: 211;
+                    value "b" uchar: 219;
+                    value "a" uchar: 255;
+                }
+            }
+            group "black" struct {
+                group "Color" struct {
+                    value "r" uchar: 18;
+                    value "g" uchar: 38;
+                    value "b" uchar: 50;
+                    value "a" uchar: 255;
+                }
+            }
+            group "red" struct {
+                group "Color" struct {
+                    value "r" uchar: 232;
+                    value "g" uchar: 120;
+                    value "b" uchar: 129;
+                    value "a" uchar: 255;
+                }
+            }
+            group "green" struct {
+                group "Color" struct {
+                    value "r" uchar: 143;
+                    value "g" uchar: 203;
+                    value "b" uchar: 170;
+                    value "a" uchar: 255;
+                }
+            }
+            group "yellow" struct {
+                group "Color" struct {
+                    value "r" uchar: 212;
+                    value "g" uchar: 184;
+                    value "b" uchar: 122;
+                    value "a" uchar: 255;
+                }
+            }
+            group "blue" struct {
+                group "Color" struct {
+                    value "r" uchar: 93;
+                    value "g" uchar: 159;
+                    value "b" uchar: 197;
+                    value "a" uchar: 255;
+                }
+            }
+            group "magenta" struct {
+                group "Color" struct {
+                    value "r" uchar: 183;
+                    value "g" uchar: 163;
+                    value "b" uchar: 203;
+                    value "a" uchar: 255;
+                }
+            }
+            group "cyan" struct {
+                group "Color" struct {
+                    value "r" uchar: 112;
+                    value "g" uchar: 203;
+                    value "b" uchar: 215;
+                    value "a" uchar: 255;
+                }
+            }
+            group "white" struct {
+                group "Color" struct {
+                    value "r" uchar: 197;
+                    value "g" uchar: 221;
+                    value "b" uchar: 229;
+                    value "a" uchar: 255;
+                }
+            }
+            group "inverse_fg" struct {
+                group "Color" struct {
+                    value "r" uchar: 7;
+                    value "g" uchar: 24;
+                    value "b" uchar: 32;
+                    value "a" uchar: 255;
+                }
+            }
+            group "inverse_bg" struct {
+                group "Color" struct {
+                    value "r" uchar: 197;
+                    value "g" uchar: 221;
+                    value "b" uchar: 229;
+                    value "a" uchar: 255;
+                }
+            }
+        }
+    }
+    group "Bright" struct {
+        group "Color_Block" struct {
+            group "def" struct {
+                group "Color" struct {
+                    value "r" uchar: 220;
+                    value "g" uchar: 239;
+                    value "b" uchar: 243;
+                    value "a" uchar: 255;
+                }
+            }
+            group "black" struct {
+                group "Color" struct {
+                    value "r" uchar: 84;
+                    value "g" uchar: 116;
+                    value "b" uchar: 132;
+                    value "a" uchar: 255;
+                }
+            }
+            group "red" struct {
+                group "Color" struct {
+                    value "r" uchar: 255;
+                    value "g" uchar: 160;
+                    value "b" uchar: 166;
+                    value "a" uchar: 255;
+                }
+            }
+            group "green" struct {
+                group "Color" struct {
+                    value "r" uchar: 181;
+                    value "g" uchar: 226;
+                    value "b" uchar: 197;
+                    value "a" uchar: 255;
+                }
+            }
+            group "yellow" struct {
+                group "Color" struct {
+                    value "r" uchar: 232;
+                    value "g" uchar: 210;
+                    value "b" uchar: 152;
+                    value "a" uchar: 255;
+                }
+            }
+            group "blue" struct {
+                group "Color" struct {
+                    value "r" uchar: 140;
+                    value "g" uchar: 206;
+                    value "b" uchar: 240;
+                    value "a" uchar: 255;
+                }
+            }
+            group "magenta" struct {
+                group "Color" struct {
+                    value "r" uchar: 210;
+                    value "g" uchar: 189;
+                    value "b" uchar: 229;
+                    value "a" uchar: 255;
+                }
+            }
+            group "cyan" struct {
+                group "Color" struct {
+                    value "r" uchar: 167;
+                    value "g" uchar: 237;
+                    value "b" uchar: 243;
+                    value "a" uchar: 255;
+                }
+            }
+            group "white" struct {
+                group "Color" struct {
+                    value "r" uchar: 237;
+                    value "g" uchar: 248;
+                    value "b" uchar: 250;
+                    value "a" uchar: 255;
+                }
+            }
+            group "inverse_fg" struct {
+                group "Color" struct {
+                    value "r" uchar: 7;
+                    value "g" uchar: 24;
+                    value "b" uchar: 32;
+                    value "a" uchar: 255;
+                }
+            }
+            group "inverse_bg" struct {
+                group "Color" struct {
+                    value "r" uchar: 220;
+                    value "g" uchar: 239;
+                    value "b" uchar: 243;
+                    value "a" uchar: 255;
+                }
+            }
+        }
+    }
+    group "Faint" struct {
+        group "Color_Block" struct {
+            group "def" struct {
+                group "Color" struct {
+                    value "r" uchar: 136;
+                    value "g" uchar: 152;
+                    value "b" uchar: 158;
+                    value "a" uchar: 200;
+                }
+            }
+            group "black" struct {
+                group "Color" struct {
+                    value "r" uchar: 13;
+                    value "g" uchar: 27;
+                    value "b" uchar: 36;
+                    value "a" uchar: 200;
+                }
+            }
+            group "red" struct {
+                group "Color" struct {
+                    value "r" uchar: 167;
+                    value "g" uchar: 86;
+                    value "b" uchar: 93;
+                    value "a" uchar: 200;
+                }
+            }
+            group "green" struct {
+                group "Color" struct {
+                    value "r" uchar: 103;
+                    value "g" uchar: 146;
+                    value "b" uchar: 122;
+                    value "a" uchar: 200;
+                }
+            }
+            group "yellow" struct {
+                group "Color" struct {
+                    value "r" uchar: 153;
+                    value "g" uchar: 132;
+                    value "b" uchar: 88;
+                    value "a" uchar: 200;
+                }
+            }
+            group "blue" struct {
+                group "Color" struct {
+                    value "r" uchar: 67;
+                    value "g" uchar: 114;
+                    value "b" uchar: 142;
+                    value "a" uchar: 200;
+                }
+            }
+            group "magenta" struct {
+                group "Color" struct {
+                    value "r" uchar: 132;
+                    value "g" uchar: 117;
+                    value "b" uchar: 146;
+                    value "a" uchar: 200;
+                }
+            }
+            group "cyan" struct {
+                group "Color" struct {
+                    value "r" uchar: 81;
+                    value "g" uchar: 146;
+                    value "b" uchar: 155;
+                    value "a" uchar: 200;
+                }
+            }
+            group "white" struct {
+                group "Color" struct {
+                    value "r" uchar: 142;
+                    value "g" uchar: 159;
+                    value "b" uchar: 165;
+                    value "a" uchar: 200;
+                }
+            }
+            group "inverse_fg" struct {
+                group "Color" struct {
+                    value "r" uchar: 5;
+                    value "g" uchar: 17;
+                    value "b" uchar: 23;
+                    value "a" uchar: 200;
+                }
+            }
+            group "inverse_bg" struct {
+                group "Color" struct {
+                    value "r" uchar: 142;
+                    value "g" uchar: 159;
+                    value "b" uchar: 165;
+                    value "a" uchar: 200;
+                }
+            }
+        }
+    }
+}

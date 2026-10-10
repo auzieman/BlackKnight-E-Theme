@@ -13,5 +13,15 @@
     "sha256": "53df7e6525ddb28a804573be886ef88124418347a95cfaaa5bc041a780283b0a",
     "origin": "Original scene edit; square-tower castle architecture informed by user screenshot, no photograph supplied to generator",
     "status": "visual candidate; original scene preserved"
+  },
+  "storm_rasters": {
+    "clouds-v2.png": {
+      "sha256": "df12df6033993b2f3de67501fdb2338eb7c0d11fb432680bdb436c7750ff4318",
+      "origin": "Original built-in imagegen generation; transparent production overlay"
+    },
+    "lightning-v2.png": {
+      "sha256": "060b119414bf6235c36c7d4b47f20018cbaa7b4d918e29d97590181177a9204b",
+      "origin": "Original built-in imagegen generation; transparent production overlay"
+    }
   }
 }
