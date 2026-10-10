@@ -8,8 +8,12 @@ apk info -v > /outputs/packages.txt
 mkdir -p /outputs/result /tmp/desktop
 cp -a /work/desktop/. /tmp/desktop/
 cd /tmp/desktop
-edje_cc -id . -fd . default.edc /outputs/result/BlackKnight-BlueSteel.edj
+edje_cc -I . -id . -fd . default.edc /outputs/result/BlackKnight-BlueSteel.edj
 cp blackknight-source.json /outputs/result/
 cp /work/source-revision.txt /outputs/result/
 cd /outputs/result
 sha256sum BlackKnight-BlueSteel.edj > SHA256SUMS
+
+cc -std=gnu99 -Wall -Wextra $(pkg-config --cflags elementary) /work/theme-trial.c -o /outputs/result/theme-trial $(pkg-config --libs elementary)
+cd /outputs/result
+sha256sum theme-trial >> SHA256SUMS
