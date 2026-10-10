@@ -36,3 +36,11 @@ BK-003 result: castle variant selected; synchronized loop source and stronger cl
 Plan: check existing compiler/build route; prepare original blue-metal palette preview and existing-theme artwork targets. Preserve layout and upstream sources. Rollback: revert new palette files. Build evidence: edje_cc absent locally; read-only SSH to lab-ai-worker failed with No route to host. No remote mutation attempted.
 
 BK-004 result: original blue-metal SVG preview and palette/asset map prepared. SVG XML and JSON parse checks passed; theme geometry/assets unchanged. EDJ build remains blocked by unavailable local compiler and unreachable approved remote worker. No EDJ or rendering PASS claimed.
+
+## BK-005 — deep Sci-Fi / Transient-Color source study, 2026-10-10
+Objective: identify actual theme mechanisms and preserve them in a future blue-steel artwork pass.
+Plan: inspect source revisions and recover embedded source text from compiled Sci-Fi references; document executing chains, dormant declarations and adaptation boundaries. Documentation only; upstream themes and desktop untouched.
+Rollback: revert BK-005 documentation commit.
+Acceptance: fingerprint sources, name concrete groups/signals, distinguish source evidence from runtime proof, and map artwork changes to retained behaviour.
+
+BK-005 result: recovered and inspected Sci-Fi embedded source text; documented staged focus/glints, hover chains, shaped/scalable shelves, mapped rotation and image tweens. Compared current and archived Transient-Color, including cancellation-aware volume reveal and disabled filters. Source hashes/revisions and adaptation boundaries recorded in docs/theme-mechanisms.md. No upstream assets copied into the kit, theme applied, EDJ compiled or runtime/performance PASS claimed. Next slice: representative original forged-blue border artwork retaining existing theme mechanics; extraction/licensing and remote compiler proof remain prerequisites to distributing an adapted theme.
