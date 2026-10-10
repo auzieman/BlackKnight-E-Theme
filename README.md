@@ -23,3 +23,5 @@ Second material pass: [forged-blue chrome study](docs/blue-steel-pass.md), with 
 Current implementation slice: [raster artwork and native Edje assembly](master/blue-steel/README.md). Previous SVG chrome overlay is retired.
 
 [Native compile/runtime evidence](docs/native-skin-test.md): lab-edge Swarm build and laptop test app.
+
+[Desktop integration workflow and upstream references](docs/edje-desktop-workflow.md); project skill: [e-desktop-theme](.agents/skills/e-desktop-theme/SKILL.md).
