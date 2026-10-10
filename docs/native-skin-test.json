@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-10",
+  "source_revision": "f1fd16d3c0290cab2d706acb3df82e30749c0e90",
+  "bkc_run": "16a7df81-61d3-4da4-8fae-2983fe0c899a",
+  "first_run": "b9f8fa85-342a-4a26-99bf-f574c749b200",
+  "manager": "lab-edge",
+  "node": "swarm1.lab.auzietek.com",
+  "image": "alpine:3.24.2@sha256:d56c381f961d307a21b3ca004cf1e3910f106644aefb1f43e654c8a56c4fd395",
+  "efl": "1.28.1-r2",
+  "swarm_limits": {
+    "cpu": 1,
+    "memory": "1GiB"
+  },
+  "compile": {
+    "edj": "pass",
+    "c": "pass"
+  },
+  "runtime": {
+    "render": "native EFL X11, software_x11 requested",
+    "focus_reversal": "observed and logged",
+    "disabled_click": "no action",
+    "enabled_click": "bk,action,activate [activate]",
+    "hide_show": "observed and logged",
+    "short_long_title": "observed",
+    "compact_width": 480,
+    "review_width": 800,
+    "process_left_open": true,
+    "idle_sample": {
+      "seconds": 3.001,
+      "cpu_percent_one_core": 0.0,
+      "rss_kib": 53932,
+      "limitation": "short sample only, not sustained performance acceptance"
+    },
+    "diagnostics": [
+      "One Evas hint fill_set diagnostic at startup; no crash observed"
+    ],
+    "visual_followups": [
+      "Source padding/corner proportions still candidates",
+      "Current long-title ellipsis retains the trailing text; revisit preferred title truncation"
+    ]
+  },
+  "artifacts": {
+    "skin-test": "f18df802dfa0140466fb33053547c14c5c59e4fc6413e48961f73acde6da6021",
+    "blackknight-material.edj": "639e458eab14fec5443b7b4b547ed4edf70b0471ae95bb85604bc6b88d2dd99c"
+  },
+  "screenshots": [
+    "images/native-skin-first-render.png",
+    "images/native-skin-compact.png",
+    "images/native-skin-active.png"
+  ]
+}
