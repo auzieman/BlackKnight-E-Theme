@@ -13,6 +13,10 @@ static Eina_Bool restore(void *data) {
 EAPI_MAIN int elm_main(int argc, char **argv) {
  const char *current=elm_theme_get(NULL);
  if (argc==1) { printf("PROFILE %s\nTHEME %s\n", elm_config_profile_get(), current); return 0; }
+ if (argc==3 && !strcmp(argv[1],"--restore")) {
+  elm_theme_set(NULL,argv[2]); elm_config_all_flush();
+  printf("RESTORED %s\n",argv[2]); return 0;
+ }
  if (argc!=2) { fprintf(stderr,"Usage: %s [THEME_EDJ]\n",argv[0]); return 2; }
  if (!edje_file_group_exists(argv[1], "e/widgets/border/default/border")) { fprintf(stderr,"Missing desktop border group\n"); return 1; }
  previous=strdup(current);

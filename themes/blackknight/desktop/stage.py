@@ -24,6 +24,9 @@ part=part.replace('state:    "default" 0.0;', 'state:    "default" 0.0;\n       
 text=text[:start]+part+text[end:]
 # Existing state chains now also drive the visible plate.
 text=text.replace('target:  "title_bar";', 'target:  "title_bar";\n        target:  "top_titlebar";')
+for name in ["border_shaped.edc","border_noresize.edc","border_dialog.edc","border_noresize_dialog.edc"]:
+ assert (a.output/name).is_file()
+ text=text.replace('#include "'+name+'"', '#include "../'+name+'"')
 p.write_text(text)
 shutil.copy2(root/"master/blue-steel/assets/plate.png",a.output/"wrk/bk-blue-plate.png")
 manifest={"base_border_sha256":hashlib.sha256(original.encode()).hexdigest(),"adapted_border_sha256":hashlib.sha256(text.encode()).hexdigest(),"plate_sha256":hashlib.sha256((a.output/"wrk/bk-blue-plate.png").read_bytes()).hexdigest(),"scope":"default window titlebar material; upstream geometry/actions/effects retained","distribution":"private local study; upstream licensing not established"}

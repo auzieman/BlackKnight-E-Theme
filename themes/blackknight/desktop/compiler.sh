@@ -8,7 +8,7 @@ apk info -v > /outputs/packages.txt
 mkdir -p /outputs/result /tmp/desktop
 cp -a /work/desktop/. /tmp/desktop/
 cd /tmp/desktop
-edje_cc -I . -id . -fd . default.edc /outputs/result/BlackKnight-BlueSteel.edj
+edje_cc -id . -fd . default.edc /outputs/result/BlackKnight-BlueSteel.edj
 cp blackknight-source.json /outputs/result/
 cp /work/source-revision.txt /outputs/result/
 cd /outputs/result
