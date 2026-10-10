@@ -1,6 +1,6 @@
-# Active task — BK-013 desktop trial
+# Active task — BK-015 final local build
 
-Current objective (BK-014): retain the accepted frame/shelf image remap, replace the PC start emblem with the user-selected AuzieTek griffin shield, and build/test the original knight cloud/lightning wallpaper in a native preview. Theme application remains a 20-second automatically restored trial. Preserve the accepted static scene and keep animation work in the theme project. Historical task records follow.
+Current objective (BK-015): rebuild the accepted blue-steel/griffin theme and production parallax wallpaper from commit ec07f89, verify returned artifacts, package them and refresh installed local candidates. Preserve desktop selection and the 20-second trial rollback preference.
 
 ## Initial alignment preparation
 Date: 2026-10-10
@@ -136,3 +136,8 @@ User requested separate drifting background clouds and a darker moon-cover bank.
 Swarm build: BKC run `0d0e6c0f-7d8b-4a55-9767-6d2b681a8343`, source label `parallax-clouds-v5`, immutable payload SHA256 `347667d6eb82e991472ce6abb16929be9e76211eb5e2a2a06dc2b9acce21b519`. Runtime evidence pending below.
 
 BK-014 result: parallax v5 Swarm compilation completed; seven artifact checksums passed. Native preview logged cover/strike/reset and another strike before user closure; user approved the visual result. Installed theme, production/test/still wallpapers and terminal palette as local candidates. Combined 20-second desktop trial rendered the griffin shelf; both timers restored the original serialized theme, and the original wallpaper SHA256 passed after restoration. See [setup and test evidence](setup-test.md). Pause/resume, production-cycle observation, terminal palette visual acceptance and idle resource measurement remain follow-ups; no release or permanent selection is claimed.
+
+## BK-015 — final local build
+Plan: rebuild committed accepted source through BKC CLI/Swarm, retain production/still wallpaper variants, package final EDJs with manifest/checksums, stage locally and verify native production rendering. Rollback: remove the newly named final package; existing desktop theme and wallpaper selections remain unchanged. BKC run `1e17f03e-a97b-4b43-a027-2375afdf2cfc`, payload SHA256 `c770e4610e0322ef0f82f7517f73280a76b6576b4807a9bbc9417df5c37526df`, source `ec07f89`.
+
+BK-015 result: final Swarm job completed; all seven returned artifacts and all ten final-package file checksums passed. Native production preview observed cover at 10679.422, strike at 10679.530 and clear/reset at 10702.422 (monotonic runtime timestamps). Full production cycle rendered; theme remap still verifies 64 selected image entries and 4,595 unchanged entries. Final 29 MB archive and individual theme/wallpaper EDJs are in `build/out/BlackKnight-final-ec07f89/`; installed local candidates refreshed without selecting them. [Final build record](final-build.md). No tag/publication or permanent activation performed.

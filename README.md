@@ -25,3 +25,5 @@ Current implementation slice: [raster artwork and native Edje assembly](master/b
 [Native compile/runtime evidence](docs/native-skin-test.md): lab-edge Swarm build and laptop test app.
 
 [Desktop integration workflow and upstream references](docs/edje-desktop-workflow.md); project skill: [e-desktop-theme](.agents/skills/e-desktop-theme/SKILL.md).
+
+[Final local theme and production wallpaper build](docs/final-build.md), including package paths and checksums.

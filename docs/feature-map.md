@@ -1,12 +1,15 @@
 # Feature map
-All features are planning candidates; folder presence is not implementation.
 
-| Feature | State | Acceptance |
+| Feature | State | Evidence / remaining acceptance |
 |---|---|---|
-| Source study | Planned | Record Sci-Fi/Transient-Color source revisions, animation mechanisms and provenance |
-| Still scene and controls | Planned | Preview at laptop/external-display sizes and obtain visual acceptance |
-| Shared blue-metal foundation | Planned | Demonstrate reuse without coupling theme-specific assets |
-| Fog/eyes/lightning | Planned | Validate rendering, readability, idle cost and low-motion option |
-| Tutorial kit | Planned | Editable, reproducible examples with verified build/render evidence |
+| Sci-Fi / Transient-Color source study | Implemented | Source/asset/animation study in theme-mechanisms.md; running donor provenance verified |
+| Original knight landscape | Accepted locally | User-approved static scene; original artwork provenance retained |
+| Shared blue-steel raster foundation | Implemented | Native material preview and desktop frame/shelf trial accepted |
+| Desktop frame/shelf and griffin emblem | Tested locally | 64 image-only remaps; 4,595 untouched archive entries; protected 20-second desktop trial restored original settings |
+| Parallax clouds and lightning | Tested locally | Native accelerated preview accepted; final production EDJ built; idle cost and pause/resume still require acceptance |
+| Still / low-motion alternative | Built | Still EDJ excludes animated parts and programs |
+| BlackKnight Ice terminal palette | Candidate installed | Eet encode/decode verified; visual acceptance pending |
+| Final local package | Built | Committed source ec07f89, lab-edge BKC/Swarm build, artifact checksums and manifest; see final-build.md |
+| Tutorial kit | Partial | Editable native assembly and verified build/trial procedures; full instructional walkthrough pending |
 
-BK-001: original still artwork and Edje animation source prepared. Full Sci-Fi source extraction, theme artwork adjustment, compile/render proof and performance acceptance remain pending.
+Local acceptance is distinct from a tagged/public release. Main-release integration and distribution notices remain separate release work.
