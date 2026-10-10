@@ -72,3 +72,17 @@ The installed wallpaper folder `/home/auzieman/.e/e/backgrounds` contains `E23-s
 Oh-v1 has directly editable source at `Animated-background/background-oh-V1/background.edc` in the studied repository revision. Its `e/desktop/background` group layers `bg.png`, `cloud2.png` and `cloud1.png`. The cloud parts disable mouse events. Each cloud's `drift` state shifts its image fill origin by one declared texture width: 1.47083 for cloud2 and 1.86667 for cloud1. `show` starts LINEAR transitions lasting 65 and 55 seconds respectively; each `after` chain resets to default and starts again. Different speeds provide layered motion without a frame sequence.
 
 A texture-origin reset by exactly one tile width is a useful seamless-loop technique, but the texture edges must actually tile. No rendered seam or performance test has been performed here. The source also declares `nappe-cloud.png` and `stars.png` (stars twice); those files are absent from the source folder, and the inspected parts do not use them. Treat this as a source cleanup/build-input issue rather than assuming the source will compile unchanged. Blackhole package animation and the installed Oh-v1 variants' correspondence to this source remain unverified.
+
+## Actual branch checkout inspection — BK-009
+
+Switched the existing Simotek checkout through current Transient-Color (`04b14c8cb922d43c835e3bb11dbfcdb0451ff3ee`), Fireball2 (`2d7f06ad81b26d7eb80d4db17f7ac49c9904a312`) and Ice (`707e6fa2a0e13f73b2319b4537c1429eaef5a8ec`). Left it on local study/transient-color, tracking origin/Transient-Color. Existing untracked helper scripts/artifacts were preserved; their visibility varies with branch ignore rules.
+
+Transient-Color: visually inspected img-manual/border_full.png and e_surface.png, both small transparent contour layers, and img/glow_round_corners_small.png, a separate blue segmented spinner. border.edc uses border_full with 8-pixel image borders and a maximized variant. The busy indicator maps and rotates its separate glow layer around the knob. The EDC part roles are essential context for interpreting these small PNGs.
+
+Fireball2: visually inspected img-manual/shelf_background_top.png, a dimensional rounded dark plate; orientation-specific shelf images also exist. edc/background.edc references e_fireball_wallpaper.png and e_fireball_wallpaper1.png, with SINUSOIDAL 0.5 transitions. Full signal-chain and frame-content inspection remains pending.
+
+Ice: border.edc references vgrad_med_lighter.png, vgrad_med_dark_color.png, bevel_out.png with 1-pixel image borders, and separate light/dark normal/selected button symbols. These source bindings show a different assembly from the whole-border approach; Ice pixels were not visually inspected in this pass.
+
+The Simotek build-darkmod.sh uses ImageMagick modulation/brightness/alpha operations and compiles with manual, colour-converted and unchanged image search directories. Therefore raw source PNG colours may differ from build inputs. Inspect colours.conf, selected manual image directory and generated assets before presenting a branch's final palette. The build script was read, not executed.
+
+Lesson for BlackKnight: start from approved raster material and measure its actual EDC placement/stretch regions. Inspect base, overlay, converted build input and composed render separately. The previous SVG-derived replacement set remains an unaccepted experiment and should not be treated as the approved forged-metal implementation.
