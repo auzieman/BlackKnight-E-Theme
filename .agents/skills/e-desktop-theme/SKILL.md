@@ -8,6 +8,8 @@ Consult [the official references and local integration notes](../../../docs/edje
 
 Trace the actual group, visible part, clipping, image border, state colors, signals and program targets before choosing an artwork binding. A named titlebar can be completely transparent. Preserve swallowed parts, hit areas, window actions and alternate styles unless the requested slice deliberately changes them. Keep approved raster detail; assemble it with EDC rather than replacing it with flat vector approximations.
 
+For a selected group override, consider the documented Elementary theme search chain with the working installed theme as fallback. A standalone material demo is not a desktop border group; an actual border override plus the base chain is a valid scoped desktop trial. Avoid expanding a titlebar task into unrelated legacy widget/shelf repairs.
+
 Stage adaptations outside the reference tree. Resolve includes relative to their containing EDC; image/font search paths are separate compiler inputs. Check the selected compiler's supported flags. Inspect failures for source/asset errors before increasing resources. Do not invent replacement assets or remove live groups just to make compilation pass.
 
 Use the project's existing BKC CLI/core pipeline for lab compilation. Record immutable source, payload hash, signed matching packages, constrained Swarm job and returned artifact hashes. Compilation alone does not authorize application or prove desktop compatibility.

@@ -24,9 +24,17 @@ part=part.replace('state:    "default" 0.0;', 'state:    "default" 0.0;\n       
 text=text[:start]+part+text[end:]
 # Existing state chains now also drive the visible plate.
 text=text.replace('target:  "title_bar";', 'target:  "title_bar";\n        target:  "top_titlebar";')
+first=text.index('name:          NAME"_detail";')
+last=text.index('part { /* a rect for positioning */',first)
+detail=text[first:last]
+assert '"active"' not in detail
+at=detail.rfind('} '+chr(92))
+assert at>=0
+detail=detail[:at]+'description { state: "active" 0.0; inherit: "default" 0.0; } '+chr(92)+'\n\t'+detail[at:]
+text=text[:first]+detail+text[last:]
 for name in ["border_shaped.edc","border_noresize.edc","border_dialog.edc","border_noresize_dialog.edc"]:
  assert (a.output/name).is_file()
- text=text.replace('#include "'+name+'"', '#include "../'+name+'"')
+ text=text.replace('#include "'+name+'"', '// Alternate style supplied by installed base: '+name)
 p.write_text(text)
 # Old media aliases request a nonexistent clicked state; use their pressed state.
 b=a.output/"edc/elm/button.edc";buttons=b.read_text()

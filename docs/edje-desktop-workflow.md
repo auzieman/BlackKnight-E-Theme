@@ -21,8 +21,10 @@ The reference's `edc/border.edc` includes four alternate border files located at
 
 Matching local source was found under `local-untracked/auzix-stale-outs/out-20260823T175720Z/package-slices/`, in the `desktop-enlightenment-session/source-guidebook/source/e17-0.27.1` and `desktop-efl-session/source-guidebook/source/efl-1.28.1` trees. Those are study references, not runtime dependencies. Preserve their provenance if offloading the old tree.
 
-The 0.27.1 theme settings dialog calls `elm_theme_set`, `elm_config_all_flush`, `elm_config_save`, then the restart action. EFL's `elm_theme_set(NULL, ...)` updates the default config theme; `elm_config_all_flush` also saves config. The standalone trial uses this mechanism and a host watchdog around the two desktop restarts. See [the trial source and procedure](../themes/blackknight/desktop/README.md). Until executed and confirmed, this is a prepared rollback mechanism, not a runtime PASS.
+The 0.27.1 theme settings dialog calls `elm_theme_set`, `elm_config_all_flush`, `elm_config_save`, then the restart action. EFL's `elm_theme_set(NULL, ...)` updates the default config theme; `elm_config_all_flush` also saves config. The standalone trial uses this mechanism and a host watchdog around the two desktop restarts. See [the trial source and procedure](../themes/blackknight/desktop/README.md). Until executed and confirmed, this is a prepared rollback mechanism, not a runtime PASS. For serialized settings inspection, Eet -d decodes and -x extracts; -r removes an entry. Prefer the native theme APIs for application.
 
 ## Current evidence
 
 [Material test](native-skin-test.md) proves the original standalone raster groups compiled and ran. [Active task](task.md) records the full-theme build attempts and local-trial status. [Theme mechanisms](theme-mechanisms.md) records the deeper Sci-Fi/Transient-Color study. Do not conflate these evidence levels.
+
+The basic trial now uses an Edje desktop-border override followed by the captured installed theme in Elementary’s colon-separated search order. The full old source also contains invalid shelf orientation states; it is not the accepted desktop base. Earlier whole-tree compatibility patches are study preparation only. Use the installed working theme for all unselected groups.
