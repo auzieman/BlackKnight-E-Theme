@@ -36,6 +36,10 @@ media=buttons[first:last]
 assert media.count('action: STATE_SET "clicked" 0.0;')==1
 media=media.replace('action: STATE_SET "clicked" 0.0;', 'action: STATE_SET "selected" 0.0;')
 b.write_text(buttons[:first]+media+buttons[last:])
+for name,count in [("genlist.edc",1),("list.edc",2),("gengrid.edc",1)]:
+ f=a.output/"edc/elm"/name;data=f.read_text()
+ assert data.count('action: STATE_SET "odd" 1.0;')==count
+ f.write_text(data.replace('action: STATE_SET "odd" 1.0;', 'action: STATE_SET "odd" 0.0;'))
 shutil.copy2(root/"master/blue-steel/assets/plate.png",a.output/"wrk/bk-blue-plate.png")
 manifest={"base_border_sha256":hashlib.sha256(original.encode()).hexdigest(),"adapted_border_sha256":hashlib.sha256(text.encode()).hexdigest(),"plate_sha256":hashlib.sha256((a.output/"wrk/bk-blue-plate.png").read_bytes()).hexdigest(),"scope":"default window titlebar material; upstream geometry/actions/effects retained","distribution":"private local study; upstream licensing not established"}
 (a.output/"blackknight-source.json").write_text(json.dumps(manifest,indent=2)+"\n")
