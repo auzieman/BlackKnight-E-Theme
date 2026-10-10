@@ -8,7 +8,16 @@ apk info -v > /outputs/packages.txt
 mkdir -p /outputs/result /tmp/desktop
 cp -a /work/desktop/. /tmp/desktop/
 cd /tmp/desktop
-edje_cc -id . -id clock -fd . default.edc /outputs/result/BlackKnight-BlueSteel.edj
+# Compile only the selected desktop border groups; the installed theme supplies fallback.
+cat > blackknight-border.edc <<'EDC'
+#include "macros.edc"
+data.item: "version" "110";
+collections {
+#include "fonts.edc"
+#include "edc/border.edc"
+}
+EDC
+edje_cc -id . -fd . blackknight-border.edc /outputs/result/BlackKnight-BlueSteel.edj
 cp blackknight-source.json /outputs/result/
 cp /work/source-revision.txt /outputs/result/
 cd /outputs/result

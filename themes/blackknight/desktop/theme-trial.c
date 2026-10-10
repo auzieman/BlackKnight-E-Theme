@@ -23,8 +23,13 @@ EAPI_MAIN int elm_main(int argc, char **argv) {
  if (!previous) return 1;
  // Arm the rollback before broadcasting the trial theme.
  if (!ecore_timer_add(20.0,restore,NULL)) { free(previous); return 1; }
- printf("PREVIOUS %s\nTRIAL %s\nROLLBACK 20 seconds\n",previous,argv[1]);fflush(stdout);
- elm_theme_set(NULL, argv[1]);
+ size_t length=strlen(argv[1])+strlen(previous)+2;
+ char *trial=malloc(length);
+ if (!trial) { free(previous); return 1; }
+ snprintf(trial,length,"%s:%s",argv[1],previous);
+ printf("PREVIOUS %s\nTRIAL %s\nROLLBACK 20 seconds\n",previous,trial);fflush(stdout);
+ elm_theme_set(NULL, trial);
+ free(trial);
  elm_config_all_flush();
  elm_run();
  free(previous); return 0;
