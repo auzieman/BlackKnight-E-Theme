@@ -51,3 +51,7 @@ First implementation should replace the existing frame image assets in an isolat
 
 
 The image-only desktop pass now runs: [native desktop evidence](native-skin-test.md) records the frame and shelf trials. Source-resolution refinement is permitted for the stretching center strip: v2 uses a 1024 × 27 strip while retaining donor EDC geometry. Fixed caps/tiles keep their original dimensions. The compiled donor's non-image entries remain byte-identical.
+
+## Right-cap proportions — 2026-10-11
+
+The previous recipe stretched the full right bevel across the 104-pixel control backing, while the left bevel used 30 pixels. The corrected recipe retains the right slot dimensions and donor alpha, using 74 pixels of center rail plus a 30-pixel right bevel. The separate `BlackKnight-BlueSteel-right-cap` candidate preserves all donor EDC and controls; native visual acceptance remains pending. [Enlarged cap inspection](images/right-cap-proportions-20261011.png).

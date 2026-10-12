@@ -14,7 +14,12 @@ slice() {
 }
 slice default_top_left_corner plate 300:520:0:0 30:27
 slice default_top_titlebar plate 1550:520:310:0 1024:27
-slice default_top_right_corner plate 310:520:1860:0 104:27
+# The 104px slot includes the control backing, not a 104px bevel.
+# Match the left cap's 30px ornament scale, continuing center metal beneath controls.
+ffmpeg -hide_banner -loglevel error -threads 1 -filter_complex_threads 1 \
+ -i "$material/plate.png" -i "$base/wrk/default_top_right_corner.png" \
+ -filter_complex "[0:v]split=2[body][edge];[body]crop=1550:520:310:0,scale=1024:27:flags=lanczos,crop=74:27:950:0,format=rgba[rail];[edge]crop=310:520:1860:0,scale=30:27:flags=lanczos,format=rgba[cap];[rail][cap]hstack=inputs=2[metal];[1:v]format=rgba,alphaextract[mask];[metal][mask]alphamerge[out]" \
+ -map '[out]' -frames:v 1 -y "$output/default_top_right_corner.png"
 slice default_left_border_mid plate 42:370:220:65 19:19
 slice default_left_border_top plate 42:370:220:65 19:19
 slice default_right_border plate 42:370:1900:65 19:19

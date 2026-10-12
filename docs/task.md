@@ -1,6 +1,6 @@
-# Active task — BK-015 final local build
+# Active task — BK-018 right titlebar proportions
 
-Current objective (BK-015): rebuild the accepted blue-steel/griffin theme and production parallax wallpaper from commit ec07f89, verify returned artifacts, package them and refresh installed local candidates. Preserve desktop selection and the 20-second trial rollback preference.
+Current objective (BK-018): correct the disproportionate right titlebar bevel, preserve donor controls and prepare a separately named native theme candidate for visual review.
 
 ## Initial alignment preparation
 Date: 2026-10-10
@@ -151,3 +151,19 @@ BK-016 result: three effect fields survived the desktop restart in the trial con
 User selected focus-based opacity. Prepared a standalone X11 property preview: inactive ordinary windows capped at 92%, active windows retain their original opacity, menus/dialogs/fullscreen excluded, active dialog parent retained. Native E27.1 e_comp_x.c confirms NET_WM_WINDOW_OPACITY handling. No desktop restart or persistent service. Bounded 20-second process restores saved properties in finally on normal completion or SIGINT/SIGTERM. Runtime log confirms original opacity properties restored for 12 windows. Host log check was slow; visual acceptance and sustained performance remain user review. Source: master/compositor/focus-opacity.py.
 
 BK-017 user result: user reports the focus-opacity trial crashed/disrupted applications. Marked FAILED visual/runtime acceptance despite the restoration log. Do not rerun or enable persistently; retain original settings.
+
+## BK-018 — right titlebar material proportions, 2026-10-11
+Plan: retain the 104 × 27 donor control cap and alpha, but restrict its bevel to 30 pixels; continue center material across the remaining 74 pixels. Preserve all EDC/control contracts. Build an isolated image-remapped candidate with the previously Swarm-built tool. Rollback: remove candidate; retain accepted package and desktop selection. Acceptance: exact donor alpha/dimensions, unchanged non-image entries, representative preview; native visual acceptance remains separate.
+
+BK-018 result: changed only the right-cap slice recipe; the 104 × 27 control backing now uses 74 pixels of center material plus a 30-pixel bevel. Alpha MD5 `dc2656621f95659fe102a4beb5c915c4` exactly matches donor. Existing Swarm-built remapper verified 64 image replacements and 4,595 unchanged archive entries against installed Sci-Fi donor. Candidate SHA256 `43ff5aa5ce10c6ce348fba3a65c8cf77a2eba686860b7d6ac4ac8393f52f205c`; staged separately as `~/.e/e/themes/BlackKnight-BlueSteel-right-cap.edj`. A bounded 800 × 240 native edje_player preview launched without diagnostics; no screenshot/native visual acceptance or desktop selection change claimed. Enlarged asset evidence: docs/images/right-cap-proportions-20261011.png. Shell syntax and diff checks passed.
+
+
+
+Release preparation — 2026-10-12: user accepts BlackKnight for publication.
+Plan: preserve separate repositories, commit current source/evidence, prepare
+v0.1.0 notes and verified runtime bundles, then integrate through development
+and main before annotated tags/push when destination and licensing are settled.
+No GitHub destination exists in local remotes; connected account is auzieman.
+GitHub SSH authentication succeeds. New-repository creation is not exposed by
+the connected GitHub tools; destination input remains pending. Rollback: retain
+current feature branch and all prior artifacts; packaging changes no live state.

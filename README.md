@@ -1,6 +1,6 @@
 # BlackKnight theme/tutorial kit
 
-Independent theme/tutorial project with original wallpaper artwork, a compiled native raster-material test, and a full desktop adaptation under validation. No release has been tagged.
+Original BlackKnight Storm/Still wallpapers, blue-steel native materials and a desktop reskin toolkit. The accepted work is being prepared for its first release; see [v0.1.0 scope and checks](docs/release-v0.1.0.md).
 
 Read [brief](docs/brief.md), [feature map](docs/feature-map.md), [active task](docs/task.md), [shared design/ownership contract](docs/project-contract.md), [branching](docs/branching.md) and [remote toolchain](docs/toolchain.md).
 
@@ -27,3 +27,5 @@ Current implementation slice: [raster artwork and native Edje assembly](master/b
 [Desktop integration workflow and upstream references](docs/edje-desktop-workflow.md); project skill: [e-desktop-theme](.agents/skills/e-desktop-theme/SKILL.md).
 
 [Final local theme and production wallpaper build](docs/final-build.md), including package paths and checksums.
+
+Source and donor-distribution notices: [NOTICE.md](NOTICE.md).
