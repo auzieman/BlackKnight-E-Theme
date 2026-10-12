@@ -1,6 +1,10 @@
 # BlackKnight theme/tutorial kit
 
-Original BlackKnight Storm/Still wallpapers, blue-steel native materials and a desktop reskin toolkit. The accepted work is being prepared for its first release; see [v0.1.0 scope and checks](docs/release-v0.1.0.md).
+Original BlackKnight Storm/Still wallpapers, blue-steel materials and a desktop reskin toolkit. See [v0.1.0 downloads](https://github.com/auzieman/BlackKnight-E-Theme/releases/tag/v0.1.0) and [release scope](docs/release-v0.1.0.md).
+
+![Desktop screenshot](docs/images/blackknight-user-desktop-20261010.jpg)
+
+BlackKnight wallpaper and blue-steel shelf on the native Enlightenment desktop.
 
 Read [brief](docs/brief.md), [feature map](docs/feature-map.md), [active task](docs/task.md), [shared design/ownership contract](docs/project-contract.md), [branching](docs/branching.md) and [remote toolchain](docs/toolchain.md).
 
