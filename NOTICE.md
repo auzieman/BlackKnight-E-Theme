@@ -2,7 +2,9 @@
 
 Original BlackKnight wallpaper EDC, landscape, cloud/lightning imagery,
 blue-steel material and project tools have provenance records in this repository.
-A project-wide original-source/artwork license has not yet been selected.
+Original software is GPL-3.0-only; original artwork is CC-BY-SA-4.0.
+See LICENSE, LICENSING.md and LICENSES/. Inherited donor portions are excluded
+from these original-contribution license declarations.
 
 The desktop reskin preserves the user's installed E20 Sci-Fi theme. The donor
 identity and source comparison are in

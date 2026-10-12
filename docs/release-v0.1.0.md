@@ -1,8 +1,9 @@
 # BlackKnight v0.1.0 release preparation
 
 2026-10-12. The user requested publishing the accepted theme work with E-Jamz.
-GitHub destination and original-source/artwork license are being selected.
-No public release or tag has been published by this preparation record.
+Release target: https://github.com/auzieman/BlackKnight-E-Theme. The user
+selected public publication, GPLv3 original software and CC BY-SA 4.0 original
+artwork. The donor distribution boundary below remains in place.
 
 ## Accepted deliverables
 

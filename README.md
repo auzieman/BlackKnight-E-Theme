@@ -29,3 +29,6 @@ Current implementation slice: [raster artwork and native Edje assembly](master/b
 [Final local theme and production wallpaper build](docs/final-build.md), including package paths and checksums.
 
 Source and donor-distribution notices: [NOTICE.md](NOTICE.md).
+
+Original code: **GPLv3**. Original artwork: **CC BY-SA 4.0**.
+See [licensing scope and exceptions](LICENSING.md).
