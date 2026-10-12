@@ -1,6 +1,6 @@
-# Active task — BK-018 right titlebar proportions
+# Active task — initial release publication
 
-Current objective (BK-018): correct the disproportionate right titlebar bevel, preserve donor controls and prepare a separately named native theme candidate for visual review.
+Current objective: publish the accepted BlackKnight source/materials and original wallpaper package through GitHub. Preserve the separate right-cap candidate and donor notice boundary; repository destination and licensing remain pending.
 
 ## Initial alignment preparation
 Date: 2026-10-10
@@ -167,3 +167,13 @@ No GitHub destination exists in local remotes; connected account is auzieman.
 GitHub SSH authentication succeeds. New-repository creation is not exposed by
 the connected GitHub tools; destination input remains pending. Rollback: retain
 current feature branch and all prior artifacts; packaging changes no live state.
+
+Release preparation result: current source/evidence committed; feature,
+development and main integrated by fast-forward in isolated worktrees.
+Runtime/source archives, checksums and offline Git bundles prepared under
+build/out/releases/. Generated player resources reproduce recorded hashes;
+retained native artifacts and theme package checksums pass. Python/JSON/shell
+source checks pass; E-Jamz dialog/plugin positive and negative schema checks
+pass in a workspace-only jsonschema environment. GitHub SSH authenticates as
+auzieman. Remotes/publication/tags wait for destination and license selection.
+The connected GitHub tools do not provide new-repository creation.
