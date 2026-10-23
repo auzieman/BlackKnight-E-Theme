@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" viewBox="0 0 760 260">
+<rect width="760" height="260" fill="#eef2f4"/>
+<text x="24" y="28" font-family="sans-serif" font-size="18" fill="#243c4b">Frosted glass · truncated-triangle silhouette study</text>
+<polygon points="109.000,70.588 91.000,70.588 19.000,195.296 28.000,210.885 172.000,210.885 181.000,195.296" fill="#dce7ed" stroke="#7d99aa" stroke-width="2"/>
+<text x="24" y="239" font-family="sans-serif" font-size="13" fill="#243c4b">Cut 10%</text>
+<polygon points="302.400,79.942 273.600,79.942 212.400,185.943 226.800,210.885 349.200,210.885 363.600,185.943" fill="#dce7ed" stroke="#7d99aa" stroke-width="2"/>
+<text x="212" y="239" font-family="sans-serif" font-size="13" fill="#243c4b">Cut 16%</text>
+<polygon points="495.800,89.295 456.200,89.295 405.800,176.590 425.600,210.885 526.400,210.885 546.200,176.590" fill="#dce7ed" stroke="#7d99aa" stroke-width="2"/>
+<text x="400" y="239" font-family="sans-serif" font-size="13" fill="#243c4b">Cut 22%</text>
+<polygon points="694.000,106.962 634.000,106.962 604.000,158.923 634.000,210.885 694.000,210.885 724.000,158.923" fill="#dce7ed" stroke="#7d99aa" stroke-width="2"/>
+<text x="588" y="239" font-family="sans-serif" font-size="13" fill="#243c4b">Regular hexagon limit</text>
+</svg>

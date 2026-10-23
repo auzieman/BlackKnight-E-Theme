@@ -49,3 +49,18 @@ See [licensing scope and exceptions](LICENSING.md).
 Native packages are available through the signed AlpinE companion feed.
 See [installation and public-key verification](https://github.com/auzieman/AlpinEifyd/blob/main/docs/companion-apks.md)
 for AlpinE 3.24 x86_64. Packages preserve user settings and desktop selections.
+
+New design preparation: [workstation settings centre](docs/workstation-settings-plan.md) and [frosted-glass shape study](themes/frosted-glass/README.md).
+
+## Frosty and Minty
+
+Frosty and Minty are early Enlightenment themes with pale glass window frames,
+matching shelves and a cool blue or mint palette. Their underlying widgets use
+Ice; see [build instructions and current limits](themes/frosted-glass/desktop/README.md).
+
+![Frosty desktop](docs/images/frosty-desktop-20261023.jpg)
+![Minty desktop](docs/images/minty-desktop-20261023.jpg)
+
+The screenshots show the user's desktop during development, including an older
+Assigns session before the library-link fix. Artwork and native application names
+in the screenshots belong to their respective owners.

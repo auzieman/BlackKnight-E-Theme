@@ -1,3 +1,38 @@
+# Active theme track — Frosty desktop integration
+
+2026-10-15: user split theme and application development. Theme scope and native
+acceptance are in themes/frosted-glass/track.md. Control-centre snapshots and
+functional settings pages are separately owned; do not count their wireframe as
+completion of an E theme. This update is planning only; desktop remains unchanged.
+
+# Active task — Frosty native first assembly and settings shell
+
+2026-10-15: user authorized beginning the first pass, then selected Frosty as
+an E theme direction and suggested hue variants. The independent control-centre
+project owns the EFL shell and source/host inventory. Theme-kit owns original
+SVG glass rail, small truncated-triangle cap and content plate; no blue-steel
+artwork replaced. Neutral, Glacier and Mint preview choices are app-local.
+The native app includes a shelf edge study; this is not an installed E shelf.
+
+Build lane: dedicated e-workstation-preview-build. Shared E-Jamz inputs were
+left untouched after approval review rejected repurposing them. Final native
+run 79a784ce-6d79-432a-8e51-835df909f440 complete; navigation, search, three
+palettes, UTF-8 action glyphs and details-window creation pass. Frost/Mint main
+and matching Mint details were inspected. Desktop theme/configuration unchanged.
+See themes/frosted-glass/desktop-contracts.md for the E group integration work
+remaining, and ../control-centre/docs/task.md for application evidence/limits.
+Previous uncommitted preparation/history preserved below.
+
+# Active task — frosted-glass workstation settings preparation
+
+2026-10-14: user requested planning and skill selection for a more approachable
+settings centre while developing frosted-glass chrome. Deliverable: navigation,
+page/integration boundaries, review sequence and original editable shape study.
+Read existing guidance and inspected the user sketch. Applied e-visual-layout
+and e-desktop-theme to preparation; no native build/trial or privileged action.
+See workstation-settings-plan.md and themes/frosted-glass/README.md.
+Rollback removes only these additions/links; prior uncommitted history retained.
+
 # Active task — initial release publication
 
 Current objective: publish the accepted BlackKnight source/materials and original wallpaper package through GitHub. Preserve the separate right-cap candidate and donor notice boundary; public repository auzieman/BlackKnight-E-Theme and GPLv3/CC BY-SA 4.0 licensing are selected.
@@ -157,6 +192,7 @@ Plan: retain the 104 × 27 donor control cap and alpha, but restrict its bevel t
 
 BK-018 result: changed only the right-cap slice recipe; the 104 × 27 control backing now uses 74 pixels of center material plus a 30-pixel bevel. Alpha MD5 `dc2656621f95659fe102a4beb5c915c4` exactly matches donor. Existing Swarm-built remapper verified 64 image replacements and 4,595 unchanged archive entries against installed Sci-Fi donor. Candidate SHA256 `43ff5aa5ce10c6ce348fba3a65c8cf77a2eba686860b7d6ac4ac8393f52f205c`; staged separately as `~/.e/e/themes/BlackKnight-BlueSteel-right-cap.edj`. A bounded 800 × 240 native edje_player preview launched without diagnostics; no screenshot/native visual acceptance or desktop selection change claimed. Enlarged asset evidence: docs/images/right-cap-proportions-20261011.png. Shell syntax and diff checks passed.
 
+FS-UAE companion setup (host, no theme coupling): installed native 3.1.66 exposed via user desktop entry; recovered Seagate configurations mapped into ~/Documents/FS-UAE. Copied the 6 MiB Workbench 3.1 disk and A4000 ROM locally, with remaining media linked to the read-only Seagate mount. base-dir points at Documents/FS-UAE. Bounded launch loaded the ROM and started the emulator; source machine memory settings emitted a Gayle conflict correction. Full guest usability not visually verified. Fedora FS-UAE library is 42.9 GiB, home has 12.2 GiB available. Seagate and Fedora inspected read-only, no partition reclamation. External links require /mnt/seagate-readonly mounted; local Default machine is independent. Recovery notes saved beside local library.
 
 
 Release preparation — 2026-10-12: user accepts BlackKnight for publication.
@@ -202,3 +238,58 @@ User authorized APK packaging, repository updates and articles. Build ejamz and 
 Publication result: signed ejamz 0.1.0-r0 and blackknight-wallpapers 0.1.0-r0 are published at https://auzix.auzietek.com/alpine/repo/apps/v3.24/. BKC validation run 490909fd-80e2-4c31-aa0a-c38dfbdac8b8 and publication run cc54ba45-4cdb-4c97-9c05-4400a4e34984 completed. Native APK signatures, a clean-root installation, installed launcher/skin/wallpaper checks, musl ELF linkage, HTTPS byte hashes and fresh-client signed-index/package resolution passed. Both wallpaper EDJs match the accepted release bytes. The additional public key and fingerprint are documented in AlpinEifyd/docs/companion-apks.md; the private signer is retained on edge outside Git and public directories. Existing base-feed trust remains unchanged.
 
 The native companion apps article and two related discussion articles are published; both AUZiX/AlpinE homepages include installation links. No runtime restart, laptop installation or new boot-image acceptance is claimed.
+
+## 2026-10-23 — Frosty and Minty first desktop candidates
+
+Objective: turn the accepted original Frosty materials into real E themes,
+with a mint variant, without disturbing the current desktop. SQLite/Qt diagnosis
+is parked at the user's request. No repository changes or Qt installs.
+
+Used e-desktop-theme and e-visual-layout skills. Extracted installed Ice
+(SHA256 in themes/frosted-glass/desktop/README.md); restored its missing Megrim
+font from Enlightenment-Themes Ice branch. The decompiler's generated build.sh
+uses an obsolete filename, so the verified entrypoint is source.edc. No unrelated
+EDC compatibility patches were needed. Unchanged baseline BKC run
+3c23ec4d-5151-4cbb-9b4c-f4fbb5231f23 succeeded.
+
+Original Frosty rail/cap SVGs bind to real border and shelf parts. All original
+signal/action/target declarations and swallows compare equal. Frosty and Minty
+share structure; Minty recolors original SVGs and text highlights. Increase title
+height for readable controls. First candidate build 11916aa6-d56b-4f54-afb4-3bfb8d1f31cf
+compiled both full archives; laptop buffer renders confirmed the materials.
+The first remote render lacked Sans fonts and collapsed the text-dependent title
+height; added font fixtures to subsequent builds, without embedding them in EDJs.
+
+Build stays on edge with 2 CPUs/2 GiB, through the BKC core pipeline. Independent
+buffer renders touch no desktop setting. Source and build recipes live under
+themes/frosted-glass/desktop; build/out/frosty retains inputs/logs/artifacts.
+Rollback for candidate installation is removal of the new candidate files.
+Actual application remains a protected trial with exact prior setting captured
+and independent timed rollback. No full donor binary publication or APK yet;
+inherited licenses and full desktop visual/interaction acceptance remain open.
+
+Final candidate run 38747e6a-08e3-4a9f-a580-e851409fa140 built and rendered both
+variants. SHA256 checks passed. Dated candidates installed under
+~/.elementary/themes as Frosty-20261023.edj and Minty-20261023.edj; selection
+unchanged. Native render evidence is docs/images/{frosty,minty}-desktop-candidate-20261023.png.
+The buffer client is a plain fixture, not full app widget coverage. Next: protected
+live desktop interaction/scale trial, followed by inherited widget contrast and
+final action-glyph styling. No live trial or public release claimed.
+
+### Floating corner correction
+
+User observed rectangular corner/transparency artifacts. The inherited Ice
+`bevel` parts draw a square outline over the shaped SVG rails. Hide those visual
+parts in the default border/shelf, plus the shelf's legacy dots and shine; retain
+all parts/geometry so inherited layout anchors and programs still resolve. Enable
+the shelf's existing shaped metadata. Preserve the SVG's subtle material alpha;
+do not apply window-wide opacity to client content or change compositor settings.
+A first generator pass accidentally included the following SPACER while hiding a
+part, caught by edje_cc; bounded the edit by balanced part braces and regenerated.
+Signal/action/target and swallow declarations still match the Ice baseline.
+
+Corner correction BKC run 146eb2f2-9917-4c39-950d-9b3decc442c4 completed;
+artifact hashes verified and offscreen renders inspected. New candidates staged
+as Frosty-20261023-corners and Minty-20261023-corners without changing selection.
+Renders are docs/images/frosty-corners-20261023.png and minty-corners-20261023.png.
+Live desktop transparency and interaction still require trial.
